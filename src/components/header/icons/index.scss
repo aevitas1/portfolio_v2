@@ -1,0 +1,16 @@
+.icon_wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  .github svg,
+  .linkedin svg {
+    width: 3rem;
+    height: 3rem;
+    transition: 300ms ease-out all;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

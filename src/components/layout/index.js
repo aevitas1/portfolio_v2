@@ -1,7 +1,10 @@
 import './index.scss';
-import Sidebar from '../Sidebar';
+import PageWrapper from "../pagewrapper";
+
 const Layout = () => {
-    return <> <Sidebar/> </>
+    return <>
+        <PageWrapper />
+    </>
 }
 
 export default Layout;
