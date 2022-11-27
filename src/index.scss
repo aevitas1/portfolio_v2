@@ -4,10 +4,12 @@
 *::after {
   box-sizing: border-box;
 }
+
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 html,
 body {
   width: 100%;
@@ -20,36 +22,36 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
 ul,
-li  {
+li {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-a   {
+a {
   text-decoration: none;
   padding: 0;
   margin: 0;
   color: inherit;
 }
 
-img{
+img {
   display: block;
   width: 100%;
 }
 
-figure{
+figure {
   margin: 0;
 }
 
-html{
+html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -64,31 +66,31 @@ p,
 figure,
 blockquote,
 dl,
-dd{
+dd {
   margin: 0;
 }
 
 ul[role='list'],
-li[role='list']{
+li[role='list'] {
   list-style: none;
 }
 
-html:focus-within{
+html:focus-within {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
-a:not([class]){
+a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
 img,
-picture{
+picture {
   max-width: 100%;
   display: block;
 }
@@ -96,30 +98,21 @@ picture{
 input,
 button,
 textarea,
-select{
+select {
   font: inherit;
 }
 
-@media (prefers-reduced-motion: reduce)
-{
+@media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
   }
   *,
   *::before,
-  *::after{
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
     transition-delay: 0ms !important;
-  }
-}
-
-// Some default settings
-body {
-  transition: 150ms ease-out all;
-  & * {
-    transition: 150ms ease-out all;
   }
 }

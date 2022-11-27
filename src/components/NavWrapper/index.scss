@@ -1,0 +1,49 @@
+nav {
+  .nav_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    background-color: yellowgreen;
+    height: 800px;
+    width: 300px;
+  }
+
+  .nav_content {
+    height: 100%;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 150px;
+      width: 150px;
+      border-top: 8px solid var(--border-color);
+      border-left: 8px solid var(--border-color);
+      left: 0;
+      top: 0;
+      clip-path: polygon(0 0, 0% 100%, 100% 0);
+      border-top-left-radius: 6px;
+    }
+  }
+
+  .nav_menu {
+    position: relative;
+  }
+
+  .credits {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 150px;
+      width: 150px;
+      border-right: 8px solid var(--border-color);
+      border-bottom: 8px solid var(--border-color);
+      bottom: 0;
+      right: 0;
+      clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+      border-bottom-right-radius: 6px;
+    }
+  }
+}

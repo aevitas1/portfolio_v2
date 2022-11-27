@@ -1,15 +1,15 @@
 import './App.scss';
-import { Routes, Route } from 'react-router-dom';
-import Layout from "./components/layout";
+import {Routes, Route} from 'react-router-dom';
+import Pagewrapper from "./components/Pagewrapper";
 
 function App() {
-  return (
-      <>
-      <Routes>
-          <Route path="/" element={<Layout />}/>
-      </Routes>
-      </>
-  );
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<Pagewrapper/>}/>
+            </Routes>
+        </>
+    );
 }
 
 export default App;
