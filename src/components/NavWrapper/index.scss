@@ -1,4 +1,8 @@
 nav {
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
+
   .nav_wrapper {
     display: flex;
     justify-content: space-between;

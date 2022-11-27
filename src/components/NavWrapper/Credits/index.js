@@ -8,6 +8,7 @@ const Credits = () => {
         <>
             <div className="credits">
                 <p>&copy; {currentYear}</p>
+                <p>Stephan van der Meijden</p>
             </div>
         </>
     )

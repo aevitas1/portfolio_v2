@@ -9,6 +9,21 @@
   user-select: none;
 }
 
+body.mobile_active {
+  transition: 300ms ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+    z-index: 200;
+  }
+}
+
 //@font-face {
 //  font-family: 'Coolvetica';
 //  src: url('./fonts/coolvetica condensed rg.ttf') format('ttf');
