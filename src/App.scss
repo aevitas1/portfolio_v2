@@ -1,7 +1,23 @@
 :root {
+  // Colors
   --defaultHeight: 80px;
-  --border-color: red;
   --content-nav-padding: 4rem;
+  --backgroundColor: #000000;
+  --defaultHeader: #fff;
+  --border-color: red;
+  --dev-bg-1: red;
+  --dev-bg-2: blue;
+  --dev-bg-3: limegreen;
+  --dev-bg-4: gray;
+  --card-bg: #fff;
+  //--border-color: #ffffff;
+  //--dev-bg-1: #000000;
+  //--dev-bg-2: #000000;
+  //--dev-bg-3: #000000;
+  //--dev-bg-4: #000000;
+  // Fonts
+  --header-font: 'Coolvetica Condensed Rg';
+  --text-font: 'Helvetica Neue', 'sans-serif';
 }
 
 ::before,
@@ -9,35 +25,149 @@
   user-select: none;
 }
 
-body.mobile_active {
-  transition: 300ms ease-in-out;
+body {
+  overflow-x: hidden;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    backdrop-filter: blur(3px);
-    z-index: 200;
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('./assets/fonts/coolvetica condensed rg.ttf') format('ttf');
+}
+
+// <--------- Animations --------->
+// Mobile toggle
+@keyframes displayToggle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-//@font-face {
-//  font-family: 'Coolvetica';
-//  src: url('./fonts/coolvetica condensed rg.ttf') format('ttf');
-//}
+@keyframes topBarActive {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0.7rem);
+  }
+  100% {
+    transform: translateY(0.65rem) rotate(-45deg);
+  }
+}
+
+@keyframes bottomBarActive {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-0.7rem);
+  }
+  100% {
+    transform: translateY(-0.65rem) rotate(45deg);
+  }
+}
+
+@keyframes middleBarActive {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes topBar {
+  0% {
+    transform: translateY(0.65rem) rotate(-45deg);
+  }
+  30% {
+    transform: translateY(0.7rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottomBar {
+  0% {
+    transform: translateY(-0.65rem) rotate(45deg);
+  }
+  30% {
+    transform: translateY(-0.7rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes middleBar {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Canvas menu
+@keyframes CanvasMenu {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(calc(50vw - 150px)) translateY(10vh);
+    opacity: 1;
+  }
+}
+
+@keyframes removeCanvas {
+  from {
+    transform: translateX(calc(50vw - 150px)) translateY(10vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+// Blur background when canvas menu is active
+@keyframes blurBg {
+  from {
+    backdrop-filter: blur(0px);
+  }
+  to {
+    backdrop-filter: blur(3px);
+  }
+}
+
+@keyframes removeBlur {
+  from {
+    backdrop-filter: blur(3px);
+  }
+  to {
+    backdrop-filter: blur(0px);
+  }
+}
+
 //
 //// General variables
 //$primary-color: #ffd700;
 //$bg-color: #022c43;
 //$muted-text-clr: #444;
 //$text-clr: #f8f8f8;
-//:root {
-//  --header-font: 'Coolvetica Condensed Rg';
-//  --after-font: 'La Belle Aurore';
-//}
 //
 //html {
 //  font-size: 62.5%;

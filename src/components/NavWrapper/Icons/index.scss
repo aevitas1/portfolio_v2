@@ -1,8 +1,21 @@
 .icon_wrapper {
-  background-color: gray;
+  background-color: var(--dev-bg-4);
   height: 80px;
   display: flex;
   justify-content: flex-end;
   padding-right: 2rem;
   align-items: center;
+  gap: 1rem;
+
+  svg {
+    color: var(--defaultHeader);
+    height: 30px;
+    width: 30px;
+    transition: 100ms ease-in;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }

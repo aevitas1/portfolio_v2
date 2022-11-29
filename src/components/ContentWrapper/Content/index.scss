@@ -2,8 +2,12 @@
   position: relative;
   width: 100%;
   min-height: 800px;
-  background-color: blue;
+  background-color: var(--dev-bg-2);
   padding: var(--content-nav-padding);
+  @media screen and (max-width: 1280px) {
+    width: 100vw;
+    min-height: calc(100vh - 80px);
+  }
 
   &::before,
   &::after {

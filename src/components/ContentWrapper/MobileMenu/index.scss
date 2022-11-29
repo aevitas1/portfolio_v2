@@ -1,6 +1,9 @@
 .mobile_menu_wrapper {
+  z-index: 1000;
+
   .mobile_toggle_wrapper {
     --timing: 500ms;
+    cursor: pointer;
     @media screen and (min-width: 1280px) {
       display: none;
     }
@@ -11,17 +14,6 @@
     align-items: center;
     opacity: 1;
     animation: displayToggle 500ms 1 ease-out forwards;
-    @keyframes displayToggle {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
 
     .mobile_toggle {
       height: 1.5rem;
@@ -34,7 +26,7 @@
       .middle_bar,
       .bottom_bar {
         height: 3px;
-        background-color: red;
+        background-color: var(--dev-bg-1);
         width: 100%;
       }
 
@@ -63,91 +55,6 @@
           animation: bottomBarActive var(--timing) 1 ease-out forwards;
         }
       }
-
-      @keyframes topBarActive {
-        0% {
-          transform: translateY(0);
-        }
-        30% {
-          transform: translateY(0.7rem);
-        }
-        100% {
-          transform: translateY(0.65rem) rotate(-45deg);
-        }
-      }
-      @keyframes bottomBarActive {
-        0% {
-          transform: translateY(0);
-        }
-        30% {
-          transform: translateY(-0.7rem);
-        }
-        100% {
-          transform: translateY(-0.65rem) rotate(45deg);
-        }
-      }
-      @keyframes middleBarActive {
-        0% {
-          opacity: 1;
-        }
-        30% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-
-      @keyframes topBar {
-        0% {
-          transform: translateY(0.65rem) rotate(-45deg);
-        }
-        30% {
-          transform: translateY(0.7rem);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-      @keyframes bottomBar {
-        0% {
-          transform: translateY(-0.65rem) rotate(45deg);
-        }
-        30% {
-          transform: translateY(-0.7rem);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-      @keyframes middleBar {
-        0% {
-          opacity: 0;
-        }
-        30% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-    }
-  }
-
-  .canvas_menu {
-    display: none;
-
-    &.active {
-      display: block;
-      width: max(20vw, 200px);
-      height: 100vh;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      background-color: #fff;
-      position: absolute;
-      z-index: 300;
     }
   }
 }

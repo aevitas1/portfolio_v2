@@ -1,13 +1,9 @@
 nav {
-  @media screen and (max-width: 1280px) {
-    display: none;
-  }
-
   .nav_wrapper {
     display: flex;
     justify-content: space-between;
     flex-flow: column;
-    background-color: yellowgreen;
+    background-color: var(--dev-bg-3);
     height: 800px;
     width: 300px;
   }
@@ -48,6 +44,56 @@ nav {
       right: 0;
       clip-path: polygon(100% 100%, 0% 100%, 100% 0);
       border-bottom-right-radius: 6px;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    transform: translateX(100vw);
+    position: absolute;
+    .nav_wrapper {
+      height: 600px;
+    }
+  }
+}
+
+// The blur & canvas effect
+body {
+  &.mobile_active,
+  &.mobile_inactive {
+    transition: 300ms ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 200;
+      transition: 300ms ease-in-out;
+    }
+  }
+
+  &.mobile_active {
+    &::after {
+      animation: blurBg 300ms ease-out 1 forwards;
+    }
+
+    nav {
+      animation: CanvasMenu 300ms ease-out 1 forwards;
+      z-index: 1500;
+    }
+  }
+
+  &.mobile_inactive {
+    &::after {
+      animation: removeBlur 300ms ease-out 1 forwards;
+    }
+
+    nav {
+      @media screen and (max-width: 1280px) {
+        animation: removeCanvas 300ms ease-out 1 forwards;
+      }
     }
   }
 }

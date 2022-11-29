@@ -1,4 +1,9 @@
 .page_inner_wrapper {
   display: flex;
   gap: min(250px, 5vw);
+  @media screen and (max-width: 1280px) {
+    gap: 0;
+    width: 100vw;
+    min-height: 100vh;
+  }
 }
