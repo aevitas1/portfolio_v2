@@ -8,7 +8,7 @@
   gap: 1rem;
 
   svg {
-    color: var(--defaultHeader);
+    color: var(--secondary);
     height: 30px;
     width: 30px;
     transition: 100ms ease-in;
@@ -16,6 +16,30 @@
 
     &:hover {
       transform: scale(1.05);
+    }
+  }
+}
+
+
+// Desktop
+@media screen and (max-width: 1280px) {
+  .nav_top {
+    .icon_wrapper {
+      display: none;
+    }
+  }
+}
+
+// Mobile
+.top_bar_content {
+  .icon_wrapper {
+    @media screen and (min-width: 1280px) {
+      display: none;
+    }
+
+    svg {
+      height: 25px;
+      width: 25px;
     }
   }
 }

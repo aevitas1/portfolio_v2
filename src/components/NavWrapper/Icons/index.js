@@ -1,5 +1,6 @@
 import './index.scss';
-import {FaLinkedin, FaGithubSquare, FaMailBulk} from 'react-icons/fa';
+import {FaLinkedin, FaGithubSquare} from 'react-icons/fa';
+import {BsFillEnvelopeFill} from 'react-icons/bs';
 
 const Icons = () => {
     return (
@@ -12,7 +13,7 @@ const Icons = () => {
                     <FaGithubSquare/>
                 </a>
                 <a href="#" rel="noreferrer" target="_blank">
-                    <FaMailBulk/>
+                    <BsFillEnvelopeFill/>
                 </a>
             </div>
         </>

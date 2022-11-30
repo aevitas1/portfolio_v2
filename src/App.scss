@@ -4,17 +4,23 @@
   --content-nav-padding: 4rem;
   --backgroundColor: #000000;
   --defaultHeader: #fff;
-  --border-color: red;
-  --dev-bg-1: red;
-  --dev-bg-2: blue;
-  --dev-bg-3: limegreen;
-  --dev-bg-4: gray;
   --card-bg: #fff;
-  //--border-color: #ffffff;
-  //--dev-bg-1: #000000;
-  //--dev-bg-2: #000000;
-  //--dev-bg-3: #000000;
-  //--dev-bg-4: #000000;
+  --border-width: 8px;
+
+  --primary: #fff;
+  --secondary: #fff;
+
+  //--border-color: red;
+  //--dev-bg-1: red;
+  //--dev-bg-2: blue;
+  //--dev-bg-3: limegreen;
+  //--dev-bg-4: gray;
+
+  --border-color: gray;
+  --dev-bg-1: #000000;
+  --dev-bg-2: #000000;
+  --dev-bg-3: #000000;
+  --dev-bg-4: #000000;
   // Fonts
   --header-font: 'Coolvetica Condensed Rg';
   --text-font: 'Helvetica Neue', 'sans-serif';
@@ -27,6 +33,8 @@
 
 body {
   overflow-x: hidden;
+  // REMOVE WHEN COLORS ARE SET
+  color: #fff;
 }
 
 @font-face {

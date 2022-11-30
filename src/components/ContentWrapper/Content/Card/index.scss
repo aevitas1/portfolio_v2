@@ -1,22 +1,144 @@
-.card {
-  background-color: var(--card-bg);
-  max-width: 250px;
+//.card {
+//  display: flex;
+//  flex-flow: column;
+//  max-width: 220px;
+//  color: var(--primary);
+//  border-radius: 8px;
+//  position: relative;
+//  padding: 0.75rem;
+//  padding-bottom: 0;
+//
+//  &::after,
+//  &::before {
+//    content: '';
+//    position: absolute;
+//    height: 35px;
+//    width: 35px;
+//    border-bottom-right-radius: 6px;
+//  }
+//
+//  &::before {
+//    top: 0;
+//    left: 0;
+//    border-left: var(--border-width) solid var(--border-color);
+//    border-top: var(--border-width) solid var(--border-color);
+//    clip-path: polygon(0 0, 0% 100%, 100% 0);
+//    border-top-left-radius: 6px;
+//  }
+//
+//  &::after {
+//    bottom: 0;
+//    right: 0;
+//    border-right: var(--border-width) solid var(--border-color);
+//    border-bottom: var(--border-width) solid var(--border-color);
+//    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+//    border-bottom-right-radius: 6px;
+//  }
+//
+//
+//  &_header {
+//    img {
+//      border-radius: 8px 8px 0 0;
+//    }
+//  }
+//
+//  &_content {
+//    padding: 0.75rem;
+//
+//    .toolset {
+//      display: flex;
+//      justify-content: space-evenly;
+//
+//      img {
+//        width: 2rem;
+//        height: 1.8rem;
+//      }
+//    }
+//
+//    h2,
+//    p {
+//      text-align: center;
+//    }
+//  }
+//
+//  &_footer {
+//
+//    .links {
+//      display: flex;
+//      justify-content: space-between;
+//      padding: 0.75rem;
+//      width: 100%;
+//      gap: 10px;
+//
+//      svg {
+//        width: 2rem;
+//        height: 1.8rem;
+//        color: var(--primary);
+//      }
+//    }
+//  }
+//}
 
-  &_header {
-    img {
+.project_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.scene {
+  height: 300px;
+  width: 220px;
+  perspective: 600px;
+
+  .card {
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+
+    &_face {
+      position: absolute;
+      height: 100%;
       width: 100%;
-    }
-  }
+      backface-visibility: hidden;
+      transform: rotateX(0deg);
 
-  &_footer {
-    .toolset {
-      display: flex;
+      &--back {
+        background-color: var(--backgroundColor);
+        transform: rotateY(180deg);
 
-      img {
-        max-width: 2rem;
-        height: auto;
+        .links {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.75rem;
+          width: 100%;
+          gap: 10px;
+
+          svg {
+            width: 2rem;
+            height: 1.8rem;
+            color: var(--primary);
+          }
+        }
+
+        .toolset {
+          display: flex;
+          justify-content: space-evenly;
+
+          img {
+            width: 2rem;
+            height: 1.8rem;
+          }
+        }
       }
     }
   }
-}
 
+  &:hover {
+    .card {
+      transform: translateX(-100%) rotateY(-180deg);
+    }
+  }
+
+
+}

@@ -17,8 +17,8 @@ nav {
       position: absolute;
       height: 150px;
       width: 150px;
-      border-top: 8px solid var(--border-color);
-      border-left: 8px solid var(--border-color);
+      border-top: var(--border-width) solid var(--border-color);
+      border-left: var(--border-width) solid var(--border-color);
       left: 0;
       top: 0;
       clip-path: polygon(0 0, 0% 100%, 100% 0);
@@ -38,8 +38,8 @@ nav {
       position: absolute;
       height: 150px;
       width: 150px;
-      border-right: 8px solid var(--border-color);
-      border-bottom: 8px solid var(--border-color);
+      border-right: var(--border-width) solid var(--border-color);
+      border-bottom: var(--border-width) solid var(--border-color);
       bottom: 0;
       right: 0;
       clip-path: polygon(100% 100%, 0% 100%, 100% 0);
