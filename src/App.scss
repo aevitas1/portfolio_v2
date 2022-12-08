@@ -22,8 +22,8 @@
   --dev-bg-3: #000000;
   --dev-bg-4: #000000;
   // Fonts
-  --header-font: 'Coolvetica Condensed Rg';
-  --text-font: 'Helvetica Neue', 'sans-serif';
+  --header-font: "Coolvetica Condensed Rg";
+  --text-font: "Helvetica Neue", "sans-serif";
 }
 
 ::before,
@@ -38,8 +38,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Coolvetica';
-  src: url('./assets/fonts/coolvetica condensed rg.ttf') format('ttf');
+  font-family: "Coolvetica";
+  src: url("./assets/fonts/coolvetica condensed rg.ttf") format("ttf");
 }
 
 // <--------- Animations --------->
@@ -135,7 +135,7 @@ body {
     opacity: 0;
   }
   to {
-    transform: translateX(calc(50vw - 150px)) translateY(10vh);
+    transform: translateX(0) translateY(0);
     opacity: 1;
   }
 }

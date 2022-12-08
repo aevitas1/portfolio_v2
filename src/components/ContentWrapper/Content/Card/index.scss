@@ -95,6 +95,11 @@
     transition: transform 1s;
     transform-style: preserve-3d;
     transform-origin: center right;
+    h2,
+    p {
+      user-select: none;
+      text-align: center;
+    }
 
     &_face {
       position: absolute;
@@ -139,6 +144,4 @@
       transform: translateX(-100%) rotateY(-180deg);
     }
   }
-
-
 }

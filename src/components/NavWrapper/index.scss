@@ -13,7 +13,7 @@ nav {
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       height: 150px;
       width: 150px;
@@ -34,7 +34,7 @@ nav {
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 150px;
       width: 150px;
@@ -82,6 +82,10 @@ body {
     nav {
       animation: CanvasMenu 300ms ease-out 1 forwards;
       z-index: 1500;
+      .nav_wrapper {
+        height: 100vh;
+        width: 100vw;
+      }
     }
   }
 
