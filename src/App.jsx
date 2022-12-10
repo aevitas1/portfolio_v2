@@ -1,6 +1,6 @@
-import "./App.scss";
 import Pagewrapper from "./components/Pagewrapper";
 import { AppProvider } from "./Context/AppContext";
+import "./SCSS/styles";
 function App() {
   return (
     <>

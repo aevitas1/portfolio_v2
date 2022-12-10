@@ -1,0 +1,22 @@
+:root {
+  /*<-- Color -->*/
+  --defaultHeight: 80px;
+  --contentNavPadding: 4rem;
+  --backgroundColor: #000000;
+  --backgroundColorSecondary: #000000;
+  --defaultHeader: #fff;
+  --cardBg: #fff;
+  --borderWidth: 8px;
+  --primary: #fff;
+  --secondary: #fff;
+  --primaryHover: #444;
+  --transition: all 0.15s cubic-bezier(0.07, 0.95, 0, 1);
+  --borderColor: gray;
+  --devBg1: #000000;
+  --devBg2: #000000;
+  --devBg3: #000000;
+  --devBg4: #000000;
+  /*<-- Fonts -->*/
+  --headerFont: "Coolvetica Condensed Rg";
+  --textFont: "Helvetica Neue", "sans-serif";
+}
