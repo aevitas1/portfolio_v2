@@ -12,4 +12,9 @@ main {
     align-items: center;
     padding-left: 2rem;
   }
+  @media screen and (max-width: 1280px) {
+    .icon_wrapper {
+      display: none;
+    }
+  }
 }

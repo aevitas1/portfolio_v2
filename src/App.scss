@@ -38,11 +38,49 @@ body {
   overflow-x: hidden;
   // REMOVE WHEN COLORS ARE SET
   color: #fff;
+  transition: var(--transition);
 }
 
 @font-face {
   font-family: "Coolvetica";
   src: url("./assets/fonts/coolvetica condensed rg.ttf") format("ttf");
+}
+
+// Typography
+h1 {
+  font-size: 3rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+h2 {
+  font-size: 2rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5,
+h6 {
+  font-size: 1rem;
+}
+@media screen and (max-width: 768px) {
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+a,
+p {
+  font-size: 1rem;
 }
 
 // <--------- Animations --------->
@@ -145,7 +183,7 @@ body {
 
 @keyframes removeCanvas {
   from {
-    transform: translateX(calc(50vw - 150px)) translateY(10vh);
+    transform: translateX(0) translateY(0);
     opacity: 1;
   }
   to {

@@ -14,8 +14,10 @@ const Menu = () => {
       <div className="nav_menu">
         {openMobile ? (
           <>
-            <Logo />
-            <MobileMenu />
+            <div className="top_mobile_nav">
+              <Logo />
+              <MobileMenu />
+            </div>
           </>
         ) : (
           ""
@@ -38,7 +40,9 @@ const Menu = () => {
 
         {openMobile ? (
           <>
-            <Icons />
+            <div className="bottom_mobile_nav">
+              <Icons />
+            </div>
           </>
         ) : (
           ""

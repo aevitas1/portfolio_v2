@@ -6,5 +6,7 @@
 
   .logo {
     color: var(--defaultHeader);
+    @media screen and (max-width: 800px) {
+    }
   }
 }

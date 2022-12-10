@@ -23,6 +23,15 @@ nav {
       top: 0;
       clip-path: polygon(0 0, 0% 100%, 100% 0);
       border-top-left-radius: 6px;
+      @media screen and (max-width: 1280px) {
+        height: 300px;
+        width: 300px;
+        top: 80px;
+      }
+      @media screen and (max-width: 800px) {
+        height: 150px;
+        width: 150px;
+      }
     }
   }
 
@@ -44,6 +53,14 @@ nav {
       right: 0;
       clip-path: polygon(100% 100%, 0% 100%, 100% 0);
       border-bottom-right-radius: 6px;
+      @media screen and (max-width: 1280px) {
+        height: 300px;
+        width: 300px;
+      }
+      @media screen and (max-width: 800px) {
+        height: 150px;
+        width: 150px;
+      }
     }
   }
 
@@ -83,7 +100,7 @@ body {
       animation: CanvasMenu 300ms ease-out 1 forwards;
       z-index: 1500;
       .nav_wrapper {
-        height: 100vh;
+        height: calc(100vh - 80px);
         width: 100vw;
       }
     }
@@ -91,7 +108,7 @@ body {
 
   &.mobile_inactive {
     &::after {
-      animation: removeBlur 300ms ease-out 1 forwards;
+      animation: removeBlur 1000ms ease-out 1 forwards;
     }
 
     nav {
