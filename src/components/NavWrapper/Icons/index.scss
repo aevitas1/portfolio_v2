@@ -8,19 +8,19 @@
   gap: 1rem;
 
   svg {
-    color: var(--secondary);
+    color: var(--primary);
     height: 30px;
     width: 30px;
-    transition: 100ms ease-in;
+    transition: var(--transition);
     cursor: pointer;
 
     &:hover {
-      transform: scale(1.05);
+      color: var(--primary-hover);
     }
   }
 }
 
-// // Desktop
+// Desktop
 @media screen and (max-width: 1280px) {
   .nav_top {
     .icon_wrapper {
@@ -29,7 +29,7 @@
   }
 }
 
-// // Mobile
+// Mobile
 .top_bar_content {
   .icon_wrapper {
     @media screen and (min-width: 1280px) {

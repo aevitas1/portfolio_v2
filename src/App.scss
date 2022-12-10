@@ -9,12 +9,15 @@
 
   --primary: #fff;
   --secondary: #fff;
+  --primary-hover: #444;
 
   //--border-color: red;
   //--dev-bg-1: red;
   //--dev-bg-2: blue;
   //--dev-bg-3: limegreen;
   //--dev-bg-4: gray;
+
+  --transition: all 0.15s cubic-bezier(0.07, 0.95, 0, 1);
 
   --border-color: gray;
   --dev-bg-1: #000000;

@@ -1,10 +1,12 @@
 import "./App.scss";
 import Pagewrapper from "./components/Pagewrapper";
-
+import { AppProvider } from "./Context/AppContext";
 function App() {
   return (
     <>
-      <Pagewrapper />
+      <AppProvider>
+        <Pagewrapper />
+      </AppProvider>
     </>
   );
 }
