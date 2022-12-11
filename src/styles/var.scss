@@ -1,0 +1,39 @@
+// @mixin mobile {
+//   @media screen and (max-width: 768px) {
+//     @content;
+//   }
+// }
+@font-face {
+  font-family: "coolvetica condensed rg";
+  src: local("coolvetica condensed rg"),
+    url("../fonts/coolvetica condensed rg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: local("ClashDisplay"),
+    url("../fonts/ClashDisplay-Variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("../fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+}
+/*<-- Fonts -->*/
+$headerFont: coolvetica condensed rg;
+$logoFont: ClashDisplay;
+$textFont: Inter;
+/*<-- Color -->*/
+$defaultHeader: #fafafa;
+/*<-- ////Todo//////// -->*/
+$defaultHeight: 80px;
+$contentNavPadding: 4rem;
+$backgroundColorSecondary: #000000;
+$cardBg: #fff;
+$borderWidth: 8px;
+$primary: #fff;
+$secondary: #fff;
+$primaryHover: #444;
+$transition: all 0.15s cubic-bezier(0.07, 0.95, 0, 1);
+$borderColor: gray;

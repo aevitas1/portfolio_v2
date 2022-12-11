@@ -1,0 +1,27 @@
+@use "../styles/var.scss" as var;
+@import "./reset";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var.$headerFont;
+  color: var.$primary;
+}
+p,
+a {
+  font-family: var.$textFont;
+  color: var.$primary;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: white;
+//     background: black;
+//   }
+// }

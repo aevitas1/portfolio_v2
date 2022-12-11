@@ -1,0 +1,65 @@
+@use "../../../styles/var.scss" as var;
+
+.scene {
+  height: 300px;
+  width: 220px;
+  perspective: 220px;
+
+  .card {
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    h2,
+    p {
+      user-select: none;
+      text-align: center;
+    }
+
+    &_face {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
+      transform: rotateX(0deg);
+      &_front {
+        img {
+          max-height: 300px;
+          max-width: 220px;
+        }
+      }
+      &_back {
+        transform: rotateY(180deg);
+
+        .links {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.75rem;
+          width: 100%;
+          gap: 10px;
+
+          svg {
+            width: 2rem;
+            height: 1.8rem;
+          }
+        }
+
+        .toolset {
+          display: flex;
+          justify-content: space-evenly;
+
+          img {
+            width: 2rem;
+            height: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .card {
+      transform: translateX(-100%) rotateY(-180deg);
+    }
+  }
+}
