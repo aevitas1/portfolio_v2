@@ -1,0 +1,145 @@
+@use "../../../styles/var.scss" as var;
+
+.mobile_menu_wrapper {
+  z-index: 1000;
+
+  .mobile_toggle_wrapper {
+    $timing: 500ms;
+    cursor: pointer;
+    // @media screen and (min-width: 1280px) {
+    //   display: none;
+    // }
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    animation: displayToggle 500ms 1 ease-out forwards;
+
+    .mobile_toggle {
+      height: 1.5rem;
+      width: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: column;
+    }
+    .top_bar,
+    .middle_bar,
+    .bottom_bar {
+      height: 3px;
+      background-color: var.$defaultHeader;
+      width: 100%;
+    }
+
+    .top_bar {
+      animation: topBar $timing 1 ease-out forwards;
+    }
+
+    .middle_bar {
+      animation: middleBar $timing 1 ease-out forwards;
+    }
+
+    .bottom_bar {
+      animation: bottomBar $timing 1 ease-out forwards;
+    }
+
+    .active {
+      .top_bar {
+        animation: topBarActive $timing 1 ease-out forwards;
+      }
+
+      .middle_bar {
+        animation: middleBarActive $timing 1 ease-out forwards;
+      }
+
+      .bottom_bar {
+        animation: bottomBarActive $timing 1 ease-out forwards;
+      }
+    }
+  }
+}
+
+@keyframes displayToggle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes topBarActive {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0.7rem);
+  }
+  100% {
+    transform: translateY(0.65rem) rotate(-45deg);
+  }
+}
+
+@keyframes bottomBarActive {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-0.7rem);
+  }
+  100% {
+    transform: translateY(-0.65rem) rotate(45deg);
+  }
+}
+
+@keyframes middleBarActive {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes topBar {
+  0% {
+    transform: translateY(0.65rem) rotate(-45deg);
+  }
+  30% {
+    transform: translateY(0.7rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottomBar {
+  0% {
+    transform: translateY(-0.65rem) rotate(45deg);
+  }
+  30% {
+    transform: translateY(-0.7rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes middleBar {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,20 @@
+@use "../../../styles/var.scss" as var;
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+  .logo {
+    h2,
+    h3 {
+      font-family: var.$logoFont;
+      letter-spacing: normal;
+    }
+    h3 {
+      z-index: 2;
+    }
+    h4 {
+      z-index: 1;
+      opacity: 0.8;
+      transform: translateY(-0.3rem);
+    }
+  }
+}

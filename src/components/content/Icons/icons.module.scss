@@ -1,1 +1,23 @@
 @use "../../../styles/var.scss" as var;
+
+.icon_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  a {
+    height: 32px;
+    width: 32px;
+    svg {
+      color: var.$primary;
+      height: 30px;
+      width: 30px;
+      transition: var.$transition;
+      cursor: pointer;
+      &:hover {
+        color: var.$primaryHover;
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+}
