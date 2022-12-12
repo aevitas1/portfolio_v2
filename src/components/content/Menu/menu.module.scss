@@ -1,0 +1,7 @@
+@use "../../../styles/var.scss" as var;
+
+.nav_menu {
+  display: flex;
+  justify-content: center;
+  padding: var.$defaultPadding 0;
+}

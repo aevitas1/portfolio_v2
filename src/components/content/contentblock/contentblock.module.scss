@@ -2,7 +2,7 @@
 
 .content {
   background-color: red;
-  width: 100%;
+  width: min(800px, 100vw);
   min-height: var.$pageContentHeight;
   padding: var.$defaultPadding;
 }

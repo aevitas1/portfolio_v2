@@ -52,11 +52,19 @@ h6 {
 p.helper {
   font-size: 0.75rem;
 }
-// p,
-// a {
-//   font-family: var.$textFont;
-//   color: var.$primary;
-// }
+p,
+a {
+  font-family: var.$textFont;
+  color: var.$primary;
+}
+
+a {
+  text-decoration: none;
+  transition: var.$transition;
+  &:hover {
+    color: var.$primaryHover;
+  }
+}
 
 // @media (prefers-color-scheme: dark) {
 //   html {

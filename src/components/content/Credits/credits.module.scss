@@ -1,0 +1,10 @@
+@use "../../../styles/var.scss" as var;
+.credits {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: flex-end;
+  height: var.$defaultHeight;
+  padding-top: var.$defaultPadding;
+}
