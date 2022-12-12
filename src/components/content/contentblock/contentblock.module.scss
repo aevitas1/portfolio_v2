@@ -11,7 +11,8 @@
     background-color: red;
     position: relative;
     width: min(800px, 100vw);
-    min-height: calc(var.$pageContentHeight - var.$defaultHeight);
+    height: calc(var.$pageContentHeight - var.$defaultHeight);
+
     padding: var.$defaultPadding;
     &::before,
     &::after {
