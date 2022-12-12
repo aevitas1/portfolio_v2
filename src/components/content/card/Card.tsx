@@ -2,7 +2,7 @@ import bootstrap from "../../../assets/bootstrap-5-1.svg";
 import css from "../../../assets/CSS3.svg";
 import html from "../../../assets/HTML5.svg";
 import javascript from "../../../assets/Javascript.svg";
-import sass from "../../../assets/seal-color-aef0354c.png";
+import sass from "../../../assets/sass.png";
 import react from "../../../assets/React-icon.svg.png";
 import typescript from "../../../assets/ts-logo-128.png";
 import { FiExternalLink } from "react-icons/fi";
