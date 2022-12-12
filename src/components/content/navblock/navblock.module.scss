@@ -1,0 +1,34 @@
+@use "../../../styles/var.scss" as var;
+
+.nav_wrapper {
+  background-color: green;
+  display: flex;
+  flex-flow: column;
+  min-height: var.$pageContentHeight;
+  min-width: 220px;
+  max-width: 220px;
+  position: relative;
+  padding: var.$defaultPadding;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-image: url("../../../assets/lm_bg.png") 30%;
+    height: 150px;
+    width: 150px;
+  }
+  &::before {
+    border-top: var.$borderWidth solid transparent;
+    border-left: var.$borderWidth solid transparent;
+    left: 0;
+    top: 0;
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+  }
+  &::after {
+    border-bottom: var.$borderWidth solid transparent;
+    border-right: var.$borderWidth solid transparent;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+  }
+}

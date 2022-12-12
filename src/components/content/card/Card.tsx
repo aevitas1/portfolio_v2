@@ -56,8 +56,8 @@ const Card = (props: cardProps) => {
               {props.usedReact ? <img src={react} alt="react logo" /> : ""}
               {props.usedSass ? <img src={sass} alt="sass logo" /> : ""}
             </div>
-            <h2>{props.projectName}</h2>
-            <p>{props.description}</p>
+            <h3>{props.projectName}</h3>
+            <p className="helper">{props.description}</p>
             <div className={styles.links}>
               <a href={props.codeLink} rel="noreferrer">
                 <DiCodeBadge />

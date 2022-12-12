@@ -1,0 +1,8 @@
+@use "../../../styles/var.scss" as var;
+
+.content {
+  background-color: red;
+  width: 100%;
+  min-height: var.$pageContentHeight;
+  padding: var.$defaultPadding;
+}
