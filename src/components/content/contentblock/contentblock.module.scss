@@ -12,8 +12,8 @@
     position: relative;
     width: min(800px, 100vw);
     height: calc(var.$pageContentHeight - var.$defaultHeight);
-
     padding: var.$defaultPadding;
+
     &::before,
     &::after {
       content: "";
@@ -35,6 +35,9 @@
       bottom: 0;
       right: 0;
       clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    }
+    .header {
+      padding-bottom: var.$defaultPadding;
     }
   }
 }
