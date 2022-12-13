@@ -1,50 +1,38 @@
+@use "../../../styles/var.scss" as var;
 .page_link {
   position: relative;
   display: inline-flex;
-  border: 1px solid #dee2e6;
-  background-color: #ffffff;
-  padding: 10px 15px;
-  color: #0d6efd;
-  font-size: 16px;
+  border-radius: 50%;
+  padding: 8px 12px;
+  color: var.$primary;
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
   cursor: pointer;
-}
-
-.page_link:first-child {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.page_link:last-child {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.page_link:not(:first-child) {
-  margin-left: -1px;
-}
-
-.page_link:hover,
-.page_link:focus {
-  color: #0a58ca;
-  background-color: #e9ecef;
-}
-
-.page_link:focus {
-  z-index: 3;
-}
-
-.page_link.active {
-  z-index: 2;
-  color: #ffffff;
-  border-color: #0d6efd;
-  background-color: #0d6efd;
-}
-
-.page_link.disabled {
-  color: #6c757d;
-  pointer-events: none;
+  &:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+  &:first-child,
+  &:last-child {
+    padding: 8px 9px 8px 9px;
+  }
+  &:hover,
+  &:focus {
+    color: var.$primary;
+    background-color: var.$primaryHover;
+  }
+  &:focus {
+    z-index: 3;
+  }
+  &.active {
+    z-index: 2;
+    color: var.$primaryHover;
+    background-color: var.$primary;
+  }
+  &.disabled {
+    color: var.$primaryHover;
+    pointer-events: none;
+  }
 }

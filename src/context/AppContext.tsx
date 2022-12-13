@@ -12,7 +12,6 @@ export const AppContext = createContext({
 export const AppProvider = ({ children }: AppContextInterface) => {
   const [openMobile, setOpenMobile] = useState(false);
 
-  console.log(openMobile);
   return (
     <AppContext.Provider
       value={{

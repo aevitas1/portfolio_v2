@@ -1,12 +1,23 @@
 // <--------- Projects --------->
+@use "../../../styles/var.scss" as var;
 .page_wrapper {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   height: 100%;
-  .projects {
+  > div {
+    height: 100%;
+  }
+  .project_page {
     display: flex;
+    flex-flow: column;
     flex-wrap: wrap;
-    gap: 1rem;
+    justify-content: space-between;
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding-bottom: var.$defaultPadding;
+    }
   }
 }

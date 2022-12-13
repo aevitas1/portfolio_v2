@@ -1,10 +1,6 @@
 import styles from "./pages.modules.scss";
 const Contact = () => {
-  return (
-    <>
-      <h1>Contact</h1>
-    </>
-  );
+  return <></>;
 };
 
 export default Contact;

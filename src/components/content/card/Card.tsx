@@ -36,25 +36,39 @@ const Card = (props: cardProps) => {
           </div>
           <div className={`${styles.card_face} ${styles.card_face_back}`}>
             <div className={styles.toolset}>
-              {props.usedBootstrap ? (
-                <img src={bootstrap} alt="bootstrap logo" />
-              ) : (
-                ""
+              {props.usedBootstrap && (
+                <img
+                  src={bootstrap}
+                  alt="bootstrap logo"
+                  className={styles.bootstrap}
+                />
               )}
-              {props.usedCss ? <img src={css} alt="css logo" /> : ""}
-              {props.usedHtml ? <img src={html} alt="html logo" /> : ""}
-              {props.usedJavascript ? (
-                <img src={javascript} alt="javascript logo" />
-              ) : (
-                ""
+              {props.usedCss && (
+                <img src={css} alt="css logo" className={styles.css} />
               )}
-              {props.usedTypescript ? (
-                <img src={typescript} alt="typescript logo" />
-              ) : (
-                ""
+              {props.usedHtml && (
+                <img src={html} alt="html logo" className={styles.html} />
               )}
-              {props.usedReact ? <img src={react} alt="react logo" /> : ""}
-              {props.usedSass ? <img src={sass} alt="sass logo" /> : ""}
+              {props.usedJavascript && (
+                <img
+                  src={javascript}
+                  alt="javascript logo"
+                  className={styles.javascript}
+                />
+              )}
+              {props.usedTypescript && (
+                <img
+                  src={typescript}
+                  alt="typescript logo"
+                  className={styles.typescript}
+                />
+              )}
+              {props.usedReact && (
+                <img src={react} alt="react logo" className={styles.react} />
+              )}
+              {props.usedSass && (
+                <img src={sass} alt="sass logo" className={styles.sass} />
+              )}
             </div>
             <h3>{props.projectName}</h3>
             <p className="helper">{props.description}</p>
