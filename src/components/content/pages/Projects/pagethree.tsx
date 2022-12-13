@@ -7,13 +7,13 @@ const PageThree = () => {
         image={mem}
         projectName="Foodfreedom"
         description="First website bla di bla di lorem ipsum dolor"
-        usedBootstrap={true}
-        usedTypescript={true}
+        usedHtml={true}
+        usedCss={true}
         usedSass={true}
         usedJavascript={true}
+        usedBootstrap={true}
+        usedTypescript={true}
         usedReact={true}
-        usedCss={true}
-        usedHtml={false}
         codeLink="www.google.nl"
         projectLink="www.google.com"
       />

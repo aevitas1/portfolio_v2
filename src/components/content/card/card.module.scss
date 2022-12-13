@@ -62,69 +62,41 @@
         .toolset {
           display: flex;
           justify-content: space-evenly;
-          img {
+
+          .logo_container {
             position: relative;
-            width: 2rem;
-            height: 1.8rem;
-            &.bootstrap,
-            &.css,
-            &.html,
-            &.javascript,
-            &.typescript,
-            &.react,
-            &.sass {
-              ::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-color: green;
-                // right: 0;
-                // margin: 0 auto;
-                font-size: 1rem;
-                height: 20px;
-                width: 100%;
+            display: block;
+            i {
+              color: var.$primary;
+              cursor: pointer;
+              position: relative;
+              svg {
+                width: 1.25rem;
+                height: 1.25rem;
               }
             }
-            &.bootstrap {
-              &:hover {
-                opacity: 0.2;
-              }
+            p {
+              position: absolute;
+              display: none;
+              bottom: 0rem;
+              opacity: 0;
+              left: 50%;
+              transform: translate(-50%, 0);
             }
-            &.css {
-              &:hover {
-                background-color: red;
-              }
-            }
-            &.html {
-              &:hover {
-                background-color: red;
-              }
-            }
-            &.javascript {
-              &:hover {
-                background-color: red;
-              }
-            }
-            &.typescript {
-              &:hover {
-                background-color: red;
-              }
-            }
-            &.react {
-              &:hover {
-                background-color: red;
-              }
-            }
-            &.sass {
-              &:hover {
-                background-color: red;
+            &:hover {
+              p {
+                display: block;
+                bottom: 1.3rem;
+                transition: opacity 200ms ease-out;
+                opacity: 1;
               }
             }
           }
         }
       }
     }
+    // Remove when done
+    transform: translateX(-100%) rotateY(-180deg);
   }
 
   &:hover {

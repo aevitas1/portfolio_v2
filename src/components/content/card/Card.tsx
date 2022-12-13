@@ -1,12 +1,13 @@
-import bootstrap from "../../../assets/bootstrap-5-1.svg";
-import css from "../../../assets/CSS3.svg";
-import html from "../../../assets/HTML5.svg";
-import javascript from "../../../assets/Javascript.svg";
-import sass from "../../../assets/sass.png";
-import react from "../../../assets/React-icon.svg.png";
-import typescript from "../../../assets/ts-logo-128.png";
 import { FiExternalLink } from "react-icons/fi";
 import { DiCodeBadge } from "react-icons/di";
+import {
+  IoLogoJavascript,
+  IoLogoCss3,
+  IoLogoHtml5,
+  IoLogoSass,
+} from "react-icons/io";
+import { BsBootstrapFill } from "react-icons/bs";
+import { SiTypescript, SiReact } from "react-icons/si";
 import styles from "./card.module.scss";
 
 type cardProps = {
@@ -36,38 +37,65 @@ const Card = (props: cardProps) => {
           </div>
           <div className={`${styles.card_face} ${styles.card_face_back}`}>
             <div className={styles.toolset}>
-              {props.usedBootstrap && (
-                <img
-                  src={bootstrap}
-                  alt="bootstrap logo"
-                  className={styles.bootstrap}
-                />
+              {props.usedHtml && (
+                <div className={`${styles.logo_container} ${styles.html}`}>
+                  <i>
+                    <IoLogoHtml5 />
+                  </i>
+                  <p className="helper">HTML</p>
+                </div>
               )}
               {props.usedCss && (
-                <img src={css} alt="css logo" className={styles.css} />
-              )}
-              {props.usedHtml && (
-                <img src={html} alt="html logo" className={styles.html} />
+                <div className={`${styles.logo_container} ${styles.css}`}>
+                  <i>
+                    <IoLogoCss3 />
+                  </i>
+                  <p className="helper">CSS</p>
+                </div>
               )}
               {props.usedJavascript && (
-                <img
-                  src={javascript}
-                  alt="javascript logo"
-                  className={styles.javascript}
-                />
-              )}
-              {props.usedTypescript && (
-                <img
-                  src={typescript}
-                  alt="typescript logo"
-                  className={styles.typescript}
-                />
-              )}
-              {props.usedReact && (
-                <img src={react} alt="react logo" className={styles.react} />
+                <div
+                  className={`${styles.logo_container} ${styles.javascript}`}
+                >
+                  <i>
+                    <IoLogoJavascript />
+                  </i>
+                  <p className="helper">JavaScript</p>
+                </div>
               )}
               {props.usedSass && (
-                <img src={sass} alt="sass logo" className={styles.sass} />
+                <div className={`${styles.logo_container} ${styles.sass}`}>
+                  <i>
+                    <IoLogoSass />
+                  </i>
+                  <p className="helper">SASS</p>
+                </div>
+              )}
+              {props.usedBootstrap && (
+                <div className={`${styles.logo_container} ${styles.bootstrap}`}>
+                  <i>
+                    <BsBootstrapFill />
+                  </i>
+                  <p className="helper">Bootstrap</p>
+                </div>
+              )}
+              {props.usedTypescript && (
+                <div
+                  className={`${styles.logo_container} ${styles.typescript}`}
+                >
+                  <i>
+                    <SiTypescript />
+                  </i>
+                  <p className="helper">TypeScript</p>
+                </div>
+              )}
+              {props.usedReact && (
+                <div className={`${styles.logo_container} ${styles.react}`}>
+                  <i>
+                    <SiReact />
+                  </i>
+                  <p className="helper">React</p>
+                </div>
               )}
             </div>
             <h3>{props.projectName}</h3>

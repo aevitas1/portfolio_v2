@@ -8,13 +8,13 @@ const PageTwo = () => {
         image={calc}
         projectName="Foodfreedom"
         description="First website bla di bla di lorem ipsum dolor"
-        usedBootstrap={true}
-        usedTypescript={true}
+        usedHtml={true}
+        usedCss={false}
         usedSass={true}
         usedJavascript={true}
+        usedBootstrap={false}
+        usedTypescript={false}
         usedReact={true}
-        usedCss={true}
-        usedHtml={false}
         codeLink="www.google.nl"
         projectLink="www.google.com"
       />
