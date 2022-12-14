@@ -11,6 +11,8 @@ body,
 html {
   max-height: var(--vh);
   overflow-y: hidden;
+  height: fill-available;
+  height: -webkit-fill-available;
 }
 
 h1,
