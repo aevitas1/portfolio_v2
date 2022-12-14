@@ -17,6 +17,7 @@
       border-image: url("../../../assets/lm_bg.png") 30%;
       height: 150px;
       width: 150px;
+      pointer-events: none;
     }
     &::before {
       border-top: var.$borderWidth solid transparent;
