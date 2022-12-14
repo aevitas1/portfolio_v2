@@ -15,9 +15,6 @@
     width: min(800px, 100vw);
     height: calc(var.$pageContentHeight - var.$defaultHeight);
     padding: var.$defaultPadding calc(var.$defaultPadding + var.$borderWidth);
-    @media screen and (max-width: 768px) {
-      padding: 1.75rem;
-    }
 
     &::before,
     &::after {
@@ -70,6 +67,10 @@
           opacity: 0;
         }
       }
+    }
+    @media screen and (max-width: 768px) {
+      padding: 1.75rem;
+      height: calc(var(--vh) - var.$defaultHeight);
     }
   }
 }

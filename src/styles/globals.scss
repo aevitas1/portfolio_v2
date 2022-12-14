@@ -6,6 +6,14 @@ body {
   color: var.$primary;
 }
 
+// Fix for 100vh issue on mobile
+body,
+html {
+  height: 100vh;
+  height: fill-available;
+  height: -webkit-fill-available;
+}
+
 h1,
 h2,
 h3,
