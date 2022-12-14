@@ -9,9 +9,8 @@ body {
 // Fix for 100vh issue on mobile
 body,
 html {
-  height: 100vh;
-  height: fill-available;
-  height: -webkit-fill-available;
+  max-height: var(--vh);
+  overflow-y: hidden;
 }
 
 h1,

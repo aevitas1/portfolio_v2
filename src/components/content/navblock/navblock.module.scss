@@ -66,7 +66,7 @@
         }
       }
       top: var.$defaultHeight;
-      height: calc(100vh - var.$defaultHeight);
+      height: calc(var(--vh) - var.$defaultHeight);
     }
     @media screen and (max-width: 768px) {
       height: calc(var(--vh) - var.$defaultHeight);

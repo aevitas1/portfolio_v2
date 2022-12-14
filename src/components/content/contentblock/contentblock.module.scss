@@ -55,7 +55,7 @@
     }
     @media screen and (max-width: 1280px) {
       width: min(900px, 100vw);
-      height: calc(100vh - var.$defaultHeight);
+      height: calc(var(--vh) - var.$defaultHeight);
       h1,
       > div {
         opacity: 1;
