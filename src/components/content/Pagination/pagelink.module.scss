@@ -2,6 +2,7 @@
 .page_link {
   position: relative;
   display: inline-flex;
+  align-self: center;
   border-radius: 50%;
   padding: 8px 12px;
   color: var.$primary;
@@ -19,10 +20,12 @@
   &:last-child {
     padding: 8px 9px 8px 9px;
   }
-  &:hover,
-  &:focus {
-    color: var.$primary;
-    background-color: var.$primaryHover;
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      color: var.$primary;
+      background-color: var.$primaryHover;
+    }
   }
   &:focus {
     z-index: 3;
@@ -35,5 +38,27 @@
   &.disabled {
     color: var.$primaryHover;
     pointer-events: none;
+  }
+
+  @media screen and (max-width: 400px) {
+    &:not(:nth-child(2)) {
+      padding: 1px 6px 1px 5px;
+    }
+    &:not(:first-child) {
+      margin-left: 0.25rem;
+    }
+    &:nth-child(2) {
+      padding: 1px 7px 1px 6px;
+    }
+    &:first-child,
+    &:last-child {
+      font-size: 0.75rem;
+    }
+    &:first-child {
+      padding: 5px 4px 5px 3px;
+    }
+    &:last-child {
+      padding: 3px 2px 3px 4px;
+    }
   }
 }
