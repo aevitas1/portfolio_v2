@@ -1,11 +1,20 @@
+import { useContext } from "react";
 import styles from "./navblock.module.scss";
 import Credits from "../Credits/Credits";
 import Menu from "../Menu/Menu";
+import { AppContext } from "../../../context/AppContext";
 
 const NavBlock = () => {
+  const { openMobile } = useContext(AppContext);
   return (
     <>
-      <nav className={styles.nav_wrapper}>
+      <nav
+        className={
+          openMobile
+            ? `${styles.nav_wrapper} ${styles.active}`
+            : styles.nav_wrapper
+        }
+      >
         <div className={styles.nav_body}>
           <Menu />
         </div>

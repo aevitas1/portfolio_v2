@@ -1,22 +1,45 @@
 import { NavLink } from "react-router-dom";
 import styles from "./menu.module.scss";
+import { useContext } from "react";
+import { AppContext } from "../../../context/AppContext";
 
 const Menu = () => {
+  const { openMobile, setOpenMobile } = useContext(AppContext);
   return (
     <>
       <div className={styles.nav_menu}>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink
+              to="/"
+              onClick={() => (openMobile ? setOpenMobile(false) : "")}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink
+              to="/about"
+              onClick={() => (openMobile ? setOpenMobile(false) : "")}
+            >
+              About
+            </NavLink>
           </li>
           <li>
-            <NavLink to="../projects">Projects</NavLink>
+            <NavLink
+              to="../projects"
+              onClick={() => (openMobile ? setOpenMobile(false) : "")}
+            >
+              Projects
+            </NavLink>
           </li>
           <li>
-            <NavLink to="../contact">Contact</NavLink>
+            <NavLink
+              to="../contact"
+              onClick={() => (openMobile ? setOpenMobile(false) : "")}
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </div>

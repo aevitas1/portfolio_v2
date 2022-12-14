@@ -6,13 +6,18 @@
     display: flex;
     justify-content: space-between;
     padding: 0 var.$defaultPadding;
+    @media screen and (max-width: 768px) {
+      padding: 0 1.75rem;
+    }
   }
   .content {
-    // background-color: red;
     position: relative;
     width: min(800px, 100vw);
     height: calc(var.$pageContentHeight - var.$defaultHeight);
-    padding: var.$defaultPadding;
+    padding: var.$defaultPadding calc(var.$defaultPadding + var.$borderWidth);
+    @media screen and (max-width: 768px) {
+      padding: 1.75rem;
+    }
 
     &::before,
     &::after {
@@ -21,6 +26,14 @@
       border-image: url("../../../assets/lm_bg.png") 30%;
       height: 300px;
       width: 300px;
+      @media screen and (max-width: 768px) {
+        height: 150px;
+        width: 150px;
+      }
+      @media screen and (max-width: 480px) {
+        height: 100px;
+        width: 100px;
+      }
     }
     &::before {
       border-top: var.$borderWidth solid transparent;
@@ -38,6 +51,24 @@
     }
     .header {
       padding-bottom: var.$defaultPadding;
+      @media screen and (max-width: 768px) {
+        padding-bottom: 1.75rem;
+      }
+    }
+    @media screen and (max-width: 1280px) {
+      width: min(900px, 100vw);
+      height: calc(100vh - var.$defaultHeight);
+      h1,
+      > div {
+        opacity: 1;
+        transition: var.$transition;
+      }
+      &.active {
+        h1,
+        > div {
+          opacity: 0;
+        }
+      }
     }
   }
 }

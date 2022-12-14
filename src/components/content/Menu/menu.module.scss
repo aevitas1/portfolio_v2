@@ -2,5 +2,17 @@
 
 .nav_menu {
   display: flex;
-  padding: var.$defaultPadding 0;
+  @media screen and (max-width: 1280px) {
+    justify-content: center;
+    li {
+      display: flex;
+      justify-content: center;
+      &:first-child {
+        padding-top: var.$defaultPadding;
+      }
+      &:not(:first-child) {
+        padding-top: 0.25rem;
+      }
+    }
+  }
 }

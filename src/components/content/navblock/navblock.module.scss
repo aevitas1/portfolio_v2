@@ -2,12 +2,12 @@
 
 .nav {
   &_wrapper {
-    // background-color: green;
     position: relative;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    min-height: var.$pageContentHeight;
+    top: var.$defaultHeight;
+    height: calc(var.$pageContentHeight - var.$defaultHeight);
     width: min(250px, 100vw);
     padding: var.$defaultPadding;
     &::before,
@@ -22,7 +22,7 @@
       border-top: var.$borderWidth solid transparent;
       border-left: var.$borderWidth solid transparent;
       left: 0;
-      top: var.$defaultHeight;
+      top: 0;
       clip-path: polygon(0 0, 0% 100%, 100% 0);
     }
     &::after {
@@ -32,8 +32,40 @@
       right: 0;
       clip-path: polygon(100% 100%, 0% 100%, 100% 0);
     }
-  }
-  &_body {
-    padding-top: var.$defaultPadding;
+    @media screen and (max-width: 1280px) {
+      position: absolute;
+      width: min(900px, 100vw);
+      z-index: -10;
+      &::before,
+      &::after {
+        border-image: none;
+        height: 0;
+        width: 0;
+        border: none;
+        clip-path: none;
+      }
+      &.active {
+        display: flex;
+      }
+      .nav_body,
+      .nav_footer {
+        opacity: 0;
+        transition: var.$transition;
+        user-select: none;
+        pointer-events: none;
+      }
+      &.active {
+        opacity: 1;
+        z-index: 1000;
+        .nav_body,
+        .nav_footer {
+          opacity: 1;
+          user-select: all;
+          pointer-events: all;
+        }
+      }
+      top: var.$defaultHeight;
+      height: calc(100vh - var.$defaultHeight);
+    }
   }
 }

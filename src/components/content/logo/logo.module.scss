@@ -2,6 +2,7 @@
 .logo_wrapper {
   display: flex;
   align-items: center;
+  user-select: none;
   .logo {
     h2,
     h3 {
