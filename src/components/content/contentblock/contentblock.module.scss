@@ -15,6 +15,39 @@
     width: min(800px, 100vw);
     height: calc(var.$pageContentHeight - var.$defaultHeight);
     padding: var.$defaultPadding calc(var.$defaultPadding + var.$borderWidth);
+    .content_inner {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: calc(100% - 100px);
+      overflow-y: hidden;
+    }
+
+    @media screen and (max-width: 1280px) {
+      width: min(900px, 100vw);
+      height: calc(var(--vh) - var.$defaultHeight);
+
+      h1,
+      > div {
+        opacity: 1;
+        transition: var.$transition;
+      }
+      &.active {
+        h1,
+        > div {
+          opacity: 0;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      height: auto;
+      min-height: calc(var(--vh) - var.$defaultHeight);
+      .content_inner {
+        height: auto;
+        min-height: calc(var(--vh) - calc(var.$defaultHeight + 10rem));
+      }
+    }
+
     &::before,
     &::after {
       content: "";
@@ -57,55 +90,6 @@
       bottom: 0;
       right: 0;
       clip-path: polygon(100% 100%, 0% 100%, 100% 0);
-    }
-    .header {
-      padding-bottom: var.$defaultPadding;
-      @media screen and (max-width: 768px) {
-        padding-bottom: 1.75rem;
-      }
-    }
-    .content_inner {
-      height: calc(var.$pageContentHeight - 260px);
-    }
-    &.pagination {
-      .content_inner {
-        height: calc(var.$pageContentHeight - 296px);
-      }
-    }
-    @media screen and (max-width: 1280px) {
-      width: min(900px, 100vw);
-      height: calc(var(--vh) - var.$defaultHeight);
-      h1,
-      > div {
-        opacity: 1;
-        transition: var.$transition;
-      }
-      &.active {
-        h1,
-        > div {
-          opacity: 0;
-        }
-      }
-      .content_inner {
-        height: calc(calc(var(--vh) - var.$defaultHeight) - 11rem);
-      }
-      &.pagination {
-        .content_inner {
-          height: calc(calc(var(--vh) - var.$defaultHeight) - 13.5rem);
-        }
-      }
-    }
-    @media screen and (max-width: 768px) {
-      padding: 1.75rem;
-      height: calc(var(--vh) - var.$defaultHeight);
-      .content_inner {
-        height: calc(calc(var(--vh) - var.$defaultHeight) - 8rem);
-      }
-      &.pagination {
-        .content_inner {
-          height: calc(calc(var(--vh) - var.$defaultHeight) - 11rem);
-        }
-      }
     }
   }
 }

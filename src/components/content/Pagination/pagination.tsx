@@ -10,6 +10,10 @@ export type Props = {
   setCurrentPage: (page: number) => void;
 };
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 export default function Pagination({
   currentPage,
   lastPage,
@@ -25,7 +29,10 @@ export default function Pagination({
       <PageLink
         disabled={currentPage === 1}
         // href={`${baseURL}/${currentPage - 1}`}
-        onClick={() => setCurrentPage(currentPage - 1)}
+        onClick={() => {
+          setCurrentPage(currentPage - 1);
+          scrollToTop();
+        }}
       >
         <AiOutlineLeft />
       </PageLink>
@@ -35,7 +42,10 @@ export default function Pagination({
           // href={`${baseURL}/${pageNum}`}
           active={currentPage === pageNum}
           disabled={isNaN(pageNum)}
-          onClick={() => setCurrentPage(pageNum)}
+          onClick={() => {
+            setCurrentPage(pageNum);
+            scrollToTop();
+          }}
         >
           {!isNaN(pageNum) ? pageNum : "..."}
         </PageLink>
@@ -43,7 +53,10 @@ export default function Pagination({
       <PageLink
         // href={`${baseURL}/${currentPage + 1}`}
         disabled={currentPage === lastPage}
-        onClick={() => setCurrentPage(currentPage + 1)}
+        onClick={() => {
+          setCurrentPage(currentPage + 1);
+          scrollToTop();
+        }}
       >
         <AiOutlineRight />
       </PageLink>

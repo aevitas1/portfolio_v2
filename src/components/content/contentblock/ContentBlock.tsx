@@ -10,11 +10,12 @@ import MobileMenu from "../mobilemenu/MobileMenu";
 import styles from "./contentblock.module.scss";
 import { AppContext } from "../../../context/AppContext";
 import Pagination from "../Pagination/pagination";
+import Pageheader from "../pageheader/Pageheader";
 
 const ContentBlock = () => {
   const projectPath = useLocation();
-  const { openMobile, currentPage, setCurrentPage } = useContext(AppContext);
-  const lastPage = 4;
+  const { openMobile } = useContext(AppContext);
+  // const lastPage = 4;
 
   return (
     <>
@@ -39,12 +40,7 @@ const ContentBlock = () => {
                 `${styles.content}`
           }
         >
-          <h1 className={styles.header}>
-            {projectPath.pathname === "/" && "Welcome"}
-            {projectPath.pathname === "/about" && "About me"}
-            {projectPath.pathname === "/projects" && "Projects"}
-            {projectPath.pathname === "/contact" && "Contact"}
-          </h1>
+          <Pageheader />
           <div className={styles.content_inner}>
             <Routes>
               <Route path="*" element={<Home />} />
@@ -53,15 +49,15 @@ const ContentBlock = () => {
               <Route index path="/contact" element={<Contact />} />
               <Route path="/*" element={<Home />} />
             </Routes>
+            {/* {projectPath.pathname === "/projects" && (
+              <Pagination
+                currentPage={currentPage}
+                lastPage={lastPage}
+                maxLength={4}
+                setCurrentPage={setCurrentPage}
+              />
+            )} */}
           </div>
-          {projectPath.pathname === "/projects" && (
-            <Pagination
-              currentPage={currentPage}
-              lastPage={lastPage}
-              maxLength={4}
-              setCurrentPage={setCurrentPage}
-            />
-          )}
         </div>
       </div>
     </>

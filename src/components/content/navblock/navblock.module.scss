@@ -39,11 +39,7 @@
       z-index: -10;
       &::before,
       &::after {
-        border-image: none;
-        height: 0;
-        width: 0;
-        border: none;
-        clip-path: none;
+        all: unset;
       }
       &.active {
         display: flex;

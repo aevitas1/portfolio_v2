@@ -36,24 +36,6 @@ const Home = () => {
             ratione culpa accusamus. Blanditiis excepturi ducimus sapiente rem
             explicabo tempore iusto eos modi, suscipit, quasi sed recusandae
             officiis! Provident nam veritatis nulla dolore ipsam quidem iste
-            quae nemo quas incidunt numquam eligendi molestias libero, adipisci
-            beatae accusantium, aut obcaecati distinctio sapiente modi sint
-            dignissimos. Veritatis aut eum dicta alias, labore, reprehenderit
-            facere ipsa eius qui similique neque molestiae rem quos perspiciatis
-            tempore officiis, nobis consectetur? Quidem debitis, nostrum
-            expedita doloribus dolore distinctio molestiae modi itaque explicabo
-            autem ratione minima, eligendi, officiis corrupti id? Porro nostrum
-            ipsa harum dolore eum aspernatur magnam sed velit eius vero nihil
-            vel qui similique praesentium, quas id doloribus atque sequi quo
-            assumenda. Iure culpa error voluptate laborum veniam quod, iusto
-            assumenda adipisci odio, fugiat incidunt, officiis rem? At
-            consequatur natus delectus sunt debitis dolor deleniti! Recusandae
-            exercitationem facilis delectus ea excepturi, repudiandae at fugiat
-            itaque, quae consequatur quaerat alias, quidem voluptate cumque
-            molestiae maxime velit ipsum provident. Neque, inventore maxime
-            fugit modi ut doloremque cum blanditiis, magni quam tenetur numquam
-            molestiae nulla in ratione. Necessitatibus dignissimos nisi deserunt
-            nihil optio.
           </p>
         </div>
       </div>

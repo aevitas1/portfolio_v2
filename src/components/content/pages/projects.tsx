@@ -1,13 +1,14 @@
-import { useContext } from "react";
+import { useState } from "react";
 import PageOne from "./Projects/pageone";
 import PageTwo from "./Projects/pagetwo";
 import PageThree from "./Projects/pagethree";
 import PageFour from "./Projects/pagefour";
 import styles from "./pages.module.scss";
-import { AppContext } from "../../../context/AppContext";
+import Pagination from "../Pagination/pagination";
 
 const Projects = () => {
-  const { currentPage } = useContext(AppContext);
+  const lastPage = 4;
+  const [currentPage, setCurrentPage] = useState(1);
   return (
     <>
       <div className={`${styles.page_wrapper}`}>
@@ -33,6 +34,12 @@ const Projects = () => {
             </>
           )}
         </div>
+        <Pagination
+          currentPage={currentPage}
+          lastPage={lastPage}
+          maxLength={4}
+          setCurrentPage={setCurrentPage}
+        />
       </div>
     </>
   );

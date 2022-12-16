@@ -5,10 +5,4 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 1.5rem;
-  @media screen and (max-width: 400px) {
-    position: fixed;
-    bottom: calc(0.75rem + 20px);
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
 }
