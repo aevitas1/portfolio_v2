@@ -5,18 +5,15 @@ import { AppContext } from "../../../context/AppContext";
 export const MobileMenu = () => {
   const { openMobile, setOpenMobile } = useContext(AppContext);
 
-  const toggleMobile = () => {
-    if (!openMobile) {
-      setOpenMobile(true);
-    } else {
-      setOpenMobile(false);
-    }
-  };
-
   return (
     <>
       <div className={styles.mobile_menu_wrapper}>
-        <div className={styles.mobile_toggle_wrapper} onClick={toggleMobile}>
+        <div
+          className={styles.mobile_toggle_wrapper}
+          onClick={() =>
+            openMobile ? setOpenMobile(false) : setOpenMobile(true)
+          }
+        >
           <div
             className={
               openMobile
