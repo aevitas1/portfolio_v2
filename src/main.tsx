@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./fonts/coolvetica_condensed_rg.ttf";
-import "./fonts/ClashDisplay-Variable.ttf";
-import "./fonts/Inter-VariableFont_slnt_wght.ttf";
+import "../public/fonts/coolvetica_condensed_rg.ttf";
+import "../public/fonts/ClashDisplay-Variable.ttf";
+import "../public/fonts/Inter-VariableFont_slnt_wght.ttf";
 import "./styles/globals.scss";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";

@@ -1,24 +1,19 @@
-// @mixin mobile {
-//   @media screen and (max-width: 768px) {
-//     @content;
-//   }
-// }
 @font-face {
   font-family: "coolvetica condensed rg";
   src: local("coolvetica condensed rg"),
-    url("../fonts/coolvetica_condensed_rg.ttf") format("truetype");
+    url("../public/fonts/coolvetica_condensed_rg.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "ClashDisplay";
   src: local("ClashDisplay"),
-    url("../fonts/ClashDisplay-Variable.ttf") format("truetype");
+    url("../public/fonts/ClashDisplay-Variable.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Inter";
   src: local("Inter"),
-    url("../fonts/Inter-VariableFont_slnt_wght.ttf") format("truetype");
+    url("../public/fonts/Inter-VariableFont_slnt_wght.ttf") format("truetype");
 }
 /*<-- Fonts -->*/
 $headerFont: coolvetica condensed rg;
