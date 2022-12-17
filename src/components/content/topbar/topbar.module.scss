@@ -4,8 +4,9 @@
   height: var.$defaultHeight;
   display: flex;
   justify-content: space-between;
-  padding: 0 var.$defaultPadding;
-  @media screen and (max-width: 768px) {
-    padding: 0 calc(var.$defaultPadding / 2);
+  padding: 0 calc(var.$defaultPadding + var.$borderWidth);
+  @media screen and (max-width: 400px) {
+    padding: calc(var.$defaultPadding / 1.5)
+      calc(calc(var.$defaultPadding / 1.5) + calc(var.$borderWidth * 0.75));
   }
 }

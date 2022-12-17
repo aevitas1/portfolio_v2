@@ -3,7 +3,7 @@
 .content_wrapper {
   .content {
     position: relative;
-    width: min(800px, 100vw);
+    width: 800px;
     height: calc(var.$pageContentHeight - var.$defaultHeight);
     padding: var.$defaultPadding calc(var.$defaultPadding + var.$borderWidth);
     .content_inner {
@@ -34,12 +34,15 @@
     @media screen and (max-width: 768px) {
       height: auto;
       min-height: calc(var(--vh) - var.$defaultHeight);
-      // padding: calc(var.$defaultPadding / 2)
-      //   calc(calc(var.$defaultPadding / 2) + var.$borderWidth);
       .content_inner {
         height: auto;
         min-height: calc(var(--vh) - calc(var.$defaultHeight + 10rem));
       }
+    }
+
+    @media screen and (max-width: 400px) {
+      padding: calc(var.$defaultPadding / 1.5)
+        calc(calc(var.$defaultPadding / 1.5) + calc(var.$borderWidth * 0.75));
     }
 
     &::before,
@@ -66,8 +69,8 @@
     &::before {
       border-top: var.$borderWidth solid transparent;
       border-left: var.$borderWidth solid transparent;
-      left: 1rem;
-      top: 1rem;
+      left: 0.5rem;
+      top: 0.5rem;
       clip-path: polygon(0 0, 0% 100%, 100% 0);
       @media screen and (max-width: 400px) {
         border-top: calc(var.$borderWidth * 0.75) solid transparent;
@@ -77,8 +80,8 @@
     &::after {
       border-bottom: var.$borderWidth solid transparent;
       border-right: var.$borderWidth solid transparent;
-      bottom: 1rem;
-      right: 1rem;
+      bottom: 0.5rem;
+      right: 0.5rem;
       clip-path: polygon(100% 100%, 0% 100%, 100% 0);
       @media screen and (max-width: 400px) {
         border-bottom: calc(var.$borderWidth * 0.75) solid transparent;
