@@ -22,15 +22,15 @@
     &::before {
       border-top: var.$borderWidth solid transparent;
       border-left: var.$borderWidth solid transparent;
-      left: 0;
-      top: 0;
+      left: 1rem;
+      top: 1rem;
       clip-path: polygon(0 0, 0% 100%, 100% 0);
     }
     &::after {
       border-bottom: var.$borderWidth solid transparent;
       border-right: var.$borderWidth solid transparent;
-      bottom: 0;
-      right: 0;
+      bottom: 1rem;
+      right: 1rem;
       clip-path: polygon(100% 100%, 0% 100%, 100% 0);
     }
     @media screen and (max-width: 1280px) {
