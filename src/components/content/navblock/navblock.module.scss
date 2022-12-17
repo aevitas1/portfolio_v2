@@ -62,10 +62,10 @@
         }
       }
       top: var.$defaultHeight;
-      height: calc(var(--vh) - var.$defaultHeight);
+      max-height: calc(var(--vh) - var.$defaultHeight);
     }
-    @media screen and (max-width: 768px) {
-      height: calc(var(--vh) - var.$defaultHeight);
-    }
+    // @media screen and (max-width: 768px) {
+    //   height: calc(var(--vh) - var.$defaultHeight);
+    // }
   }
 }

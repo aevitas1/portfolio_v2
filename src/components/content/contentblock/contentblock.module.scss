@@ -1,15 +1,6 @@
 @use "../../../styles/var.scss" as var;
 
 .content_wrapper {
-  .top_bar {
-    height: var.$defaultHeight;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 var.$defaultPadding;
-    @media screen and (max-width: 768px) {
-      padding: 0 1.75rem;
-    }
-  }
   .content {
     position: relative;
     width: min(800px, 100vw);
@@ -19,8 +10,7 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      height: calc(100% - 100px);
-      overflow-y: hidden;
+      min-height: calc(100% - 100px);
     }
 
     @media screen and (max-width: 1280px) {
@@ -33,6 +23,8 @@
         transition: var.$transition;
       }
       &.active {
+        height: calc(var(--vh) - var.$defaultHeight);
+        overflow-y: hidden;
         h1,
         > div {
           opacity: 0;
@@ -42,6 +34,8 @@
     @media screen and (max-width: 768px) {
       height: auto;
       min-height: calc(var(--vh) - var.$defaultHeight);
+      padding: calc(var.$defaultPadding / 2)
+        calc(calc(var.$defaultPadding / 2) + var.$borderWidth);
       .content_inner {
         height: auto;
         min-height: calc(var(--vh) - calc(var.$defaultHeight + 10rem));

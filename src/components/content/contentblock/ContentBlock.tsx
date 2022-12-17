@@ -4,27 +4,19 @@ import Home from "../pages/home";
 import About from "../pages/about";
 import Projects from "../pages/projects";
 import Contact from "../pages/contact";
-import Icons from "../Icons/Icons";
-import Logo from "../logo/Logo";
-import MobileMenu from "../mobilemenu/MobileMenu";
 import styles from "./contentblock.module.scss";
 import { AppContext } from "../../../context/AppContext";
-import Pagination from "../Pagination/pagination";
 import Pageheader from "../pageheader/Pageheader";
+import Topbar from "../topbar/Topbar";
 
 const ContentBlock = () => {
   const projectPath = useLocation();
   const { openMobile } = useContext(AppContext);
-  // const lastPage = 4;
 
   return (
     <>
       <div className={styles.content_wrapper}>
-        <div className={styles.top_bar}>
-          <Logo />
-          <Icons />
-          <MobileMenu />
-        </div>
+        <Topbar />
         <div
           className={
             // Styles for path with pagination && mobile menu open
@@ -49,14 +41,6 @@ const ContentBlock = () => {
               <Route index path="/contact" element={<Contact />} />
               <Route path="/*" element={<Home />} />
             </Routes>
-            {/* {projectPath.pathname === "/projects" && (
-              <Pagination
-                currentPage={currentPage}
-                lastPage={lastPage}
-                maxLength={4}
-                setCurrentPage={setCurrentPage}
-              />
-            )} */}
           </div>
         </div>
       </div>

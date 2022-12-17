@@ -1,0 +1,11 @@
+@use "../../../styles/var.scss" as var;
+
+.top_bar {
+  height: var.$defaultHeight;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var.$defaultPadding;
+  @media screen and (max-width: 768px) {
+    padding: 0 calc(var.$defaultPadding / 2);
+  }
+}

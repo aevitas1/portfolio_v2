@@ -2,9 +2,8 @@
 
 .scene {
   height: 150px;
-  width: 220px;
-  perspective: 220px;
-
+  width: 210px;
+  perspective: 210px;
   .card {
     position: relative;
     transition: transform 0.8s;
@@ -33,7 +32,7 @@
       &_front {
         img {
           height: 150px;
-          width: 220px;
+          width: 210px;
         }
       }
       &_back {
