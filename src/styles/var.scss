@@ -15,15 +15,22 @@
   src: local("Inter"),
     url("/fonts/Inter-VariableFont_slnt_wght.ttf") format("truetype");
 }
+/*<-- Light mode -->*/
 /*<-- Fonts -->*/
 $headerFont: coolvetica condensed rg;
 $logoFont: ClashDisplay;
 $textFont: Inter;
 /*<-- Color -->*/
-$primary: #fafafa;
-$primaryHover: #7a7a7a;
 $transition: 0.25s ease-out all;
 $defaultPadding: 2.5rem;
 $pageContentHeight: max(70vh, 700px);
 $borderWidth: 0.5rem;
 $defaultHeight: 5rem;
+
+/*<-- Light mode -->*/
+$primary: #161616;
+$primaryHover: #707070;
+
+/*<-- Dark mode -->*/
+$primaryDark: #fafafa;
+$primaryHoverDark: #7a7a7a;

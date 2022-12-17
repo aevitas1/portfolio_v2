@@ -5,13 +5,17 @@ import Menu from "../Menu/Menu";
 import { AppContext } from "../../../context/AppContext";
 
 const NavBlock = () => {
-  const { openMobile } = useContext(AppContext);
+  const { openMobile, toggleScheme } = useContext(AppContext);
   return (
     <>
       <nav
         className={
           openMobile
-            ? `${styles.nav_wrapper} ${styles.active}`
+            ? toggleScheme
+              ? `${styles.nav_wrapper} ${styles.active} ${styles.dark}`
+              : `${styles.nav_wrapper} ${styles.active}`
+            : toggleScheme
+            ? `${styles.nav_wrapper} ${styles.dark}`
             : styles.nav_wrapper
         }
       >

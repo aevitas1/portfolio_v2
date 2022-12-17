@@ -1,0 +1,59 @@
+@use "../../../styles/var.scss" as var;
+.toggleIcon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  .toggleIconInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transition: var.$transition;
+    width: 26px;
+    height: 26px;
+    background-color: var.$primary;
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      color: #fafafa;
+      &:hover {
+        color: #fafafa;
+      }
+    }
+    &:hover {
+      width: 28px;
+      height: 28px;
+      background-color: var.$primaryHover;
+    }
+    .sun,
+    .moon {
+      transition: var.$transition;
+      opacity: 0;
+      &.active {
+        animation: setActive 1s ease 1 forwards;
+      }
+      @keyframes setActive {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &.dark {
+    .toggleIconInner {
+      background-color: var.$primaryDark;
+      &:hover {
+        background-color: var.$primaryHoverDark;
+      }
+      svg {
+        color: #161616;
+        &:hover {
+          color: #161616;
+        }
+      }
+    }
+  }
+}

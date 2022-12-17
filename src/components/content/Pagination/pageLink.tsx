@@ -1,6 +1,6 @@
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import styles from "./pagelink.module.scss";
-import { HTMLProps } from "react";
+import { HTMLProps, useContext } from "react";
+import { AppContext } from "../../../context/AppContext";
 
 export type Props = HTMLProps<HTMLAnchorElement> & { active?: boolean };
 
@@ -11,9 +11,16 @@ export default function PageLink({
   children,
   ...otherProps
 }: Props) {
+  const { toggleScheme } = useContext(AppContext);
   if (disabled) {
     return (
-      <span className={`${styles.disabled} ${styles.page_link}`}>
+      <span
+        className={
+          toggleScheme
+            ? `${styles.disabled} ${styles.page_link} ${styles.dark}`
+            : `${styles.disabled} ${styles.page_link}`
+        }
+      >
         {children}
       </span>
     );
@@ -22,7 +29,13 @@ export default function PageLink({
   return (
     <a
       className={
-        active ? `${styles.page_link} ${styles.active}` : styles.page_link
+        active
+          ? toggleScheme
+            ? `${styles.page_link} ${styles.active} ${styles.dark}`
+            : `${styles.page_link} ${styles.active}`
+          : toggleScheme
+          ? `${styles.page_link} ${styles.dark}`
+          : styles.page_link
       }
       aria-current={active ? "page" : undefined}
       {...otherProps}

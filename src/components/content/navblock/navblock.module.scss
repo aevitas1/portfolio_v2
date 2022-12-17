@@ -14,7 +14,7 @@
     &::after {
       content: "";
       position: absolute;
-      border-image: url("../../../assets/lm_bg.png") 30%;
+      border-image: url("../../../assets/dm_bg.png") 30%;
       height: 150px;
       width: 150px;
       pointer-events: none;
@@ -63,6 +63,12 @@
       }
       top: var.$defaultHeight;
       max-height: calc(var(--vh) - var.$defaultHeight);
+    }
+    &.dark {
+      &::before,
+      &::after {
+        border-image: url("../../../assets/lm_bg.png") 30%;
+      }
     }
   }
 }

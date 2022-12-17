@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/dm_bg.png");
+  background-image: url("../../assets/lm_bg.png");
   min-height: 100vh;
   width: 100vw;
   .inner_wrapper {
@@ -15,5 +15,8 @@
       min-height: 100vh;
       justify-content: center;
     }
+  }
+  &.dark {
+    background-image: url("../../assets/dm_bg.png");
   }
 }

@@ -1,11 +1,13 @@
 @use "../../../styles/var.scss" as var;
 .page_link {
   position: relative;
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   align-self: center;
   border-radius: 50%;
-  padding: 8px 12px;
-  color: var.$primary;
+  height: 30px;
+  width: 30px;
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
@@ -16,15 +18,15 @@
   &:not(:first-child) {
     margin-left: 0.5rem;
   }
-  &:first-child,
-  &:last-child {
-    padding: 8px 9px 8px 9px;
-  }
+  color: var.$primary;
   @media (hover: hover) {
     &:hover,
     &:focus {
-      color: var.$primary;
+      color: #fafafa !important;
       background-color: var.$primaryHover;
+      svg {
+        color: #fafafa !important;
+      }
     }
   }
   &:focus {
@@ -32,33 +34,43 @@
   }
   &.active {
     z-index: 2;
-    color: var.$primaryHover;
+    color: #fafafa;
     background-color: var.$primary;
   }
   &.disabled {
     color: var.$primaryHover;
+    opacity: 0.6;
     pointer-events: none;
   }
 
   @media screen and (max-width: 500px) {
-    &:not(:nth-child(2)) {
-      padding: 1px 6px 1px 5px;
-    }
     &:not(:first-child) {
       margin-left: 0.25rem;
-    }
-    &:nth-child(2) {
-      padding: 1px 7px 1px 6px;
     }
     &:first-child,
     &:last-child {
       font-size: 0.75rem;
     }
-    &:first-child {
-      padding: 5px 4px 5px 3px;
+    height: 22px;
+    width: 22px;
+  }
+
+  &.dark {
+    color: var.$primaryDark;
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        color: var.$primaryDark;
+        background-color: var.$primaryHoverDark;
+      }
     }
-    &:last-child {
-      padding: 3px 2px 3px 4px;
+    &.active {
+      color: var.$primaryDark;
+      background-color: var.$primaryHoverDark;
+    }
+    &.disabled {
+      color: var.$primaryHoverDark;
+      opacity: 0.5;
     }
   }
 }

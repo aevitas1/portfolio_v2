@@ -49,7 +49,7 @@
     &::after {
       content: "";
       position: absolute;
-      border-image: url("../../../assets/lm_bg.png") 30%;
+      border-image: url("../../../assets/dm_bg.png") 30%;
       height: 300px;
       width: 300px;
       @media screen and (max-width: 768px) {
@@ -86,6 +86,14 @@
       @media screen and (max-width: 400px) {
         border-bottom: calc(var.$borderWidth * 0.75) solid transparent;
         border-right: calc(var.$borderWidth * 0.75) solid transparent;
+      }
+    }
+  }
+  &.dark {
+    .content {
+      &::before,
+      &::after {
+        border-image: url("../../../assets/lm_bg.png") 30%;
       }
     }
   }

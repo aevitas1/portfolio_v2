@@ -1,11 +1,21 @@
+import { useContext } from "react";
 import styles from "./icons.module.scss";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { BsFillEnvelopeFill } from "react-icons/bs";
+import ColorSchemeToggle from "../colorschemetoggle/ColorSchemeToggle";
+import { AppContext } from "../../../context/AppContext";
 
 const Icons = () => {
+  const { toggleScheme } = useContext(AppContext);
   return (
     <>
-      <div className={styles.icon_wrapper}>
+      <div
+        className={
+          toggleScheme
+            ? `${styles.icon_wrapper} ${styles.dark}`
+            : styles.icon_wrapper
+        }
+      >
         <a
           href="https://nl.linkedin.com/in/stephan-vd-m"
           rel="noreferrer"
@@ -19,6 +29,7 @@ const Icons = () => {
         <a href="#" rel="noreferrer" target="_blank">
           <BsFillEnvelopeFill />
         </a>
+        <ColorSchemeToggle />
       </div>
     </>
   );

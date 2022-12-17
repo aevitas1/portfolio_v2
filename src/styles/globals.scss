@@ -3,7 +3,33 @@
 
 body {
   font-family: var.$textFont;
-  color: var.$primary;
+  svg {
+    transition: var.$transition;
+  }
+  &.light {
+    color: var.$primary;
+    a:hover {
+      color: var.$primaryHover;
+    }
+    svg {
+      color: var.$primary;
+      &:hover {
+        color: var.$primaryHover;
+      }
+    }
+  }
+  &.dark {
+    color: var.$primaryDark;
+    a:hover {
+      color: var.$primaryHoverDark;
+    }
+    svg {
+      color: var.$primaryDark;
+      &:hover {
+        color: var.$primaryHoverDark;
+      }
+    }
+  }
 }
 
 // Fix for 100vh issue on mobile
@@ -20,7 +46,6 @@ h4,
 h5,
 h6 {
   font-family: var.$headerFont;
-  color: var.$primary;
   font-weight: 500;
   letter-spacing: 0.1rem;
 }
@@ -66,27 +91,14 @@ h6 {
 
 p.helper {
   font-size: 0.75rem;
+  font-weight: 500;
 }
 p,
 a {
   font-family: var.$textFont;
-  color: var.$primary;
 }
 
 a {
   text-decoration: none;
   transition: var.$transition;
-  &:hover {
-    color: var.$primaryHover;
-  }
 }
-
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-//   body {
-//     color: white;
-//     background: black;
-//   }
-// }

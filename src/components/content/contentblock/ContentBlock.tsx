@@ -11,11 +11,17 @@ import Topbar from "../topbar/Topbar";
 
 const ContentBlock = () => {
   const projectPath = useLocation();
-  const { openMobile } = useContext(AppContext);
+  const { openMobile, toggleScheme } = useContext(AppContext);
 
   return (
     <>
-      <div className={styles.content_wrapper}>
+      <div
+        className={
+          toggleScheme
+            ? `${styles.content_wrapper} ${styles.dark}`
+            : styles.content_wrapper
+        }
+      >
         <Topbar />
         <div
           className={

@@ -1,6 +1,6 @@
 import PageLink from "./pageLink";
 import styles from "./pagination.module.scss";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
 import { getPaginationItems } from "./getPaginationItem";
 
 export type Props = {
@@ -33,7 +33,7 @@ export default function Pagination({
           scrollToTop();
         }}
       >
-        <AiOutlineLeft />
+        <AiOutlineCaretLeft />
       </PageLink>
       {pageNums.map((pageNum, idx) => (
         <PageLink
@@ -57,7 +57,7 @@ export default function Pagination({
           scrollToTop();
         }}
       >
-        <AiOutlineRight />
+        <AiOutlineCaretRight />
       </PageLink>
     </nav>
   );

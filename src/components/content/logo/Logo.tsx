@@ -4,11 +4,15 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../../../context/AppContext";
 
 export const Logo = () => {
-  const { openMobile, setOpenMobile } = useContext(AppContext);
+  const { openMobile, setOpenMobile, toggleScheme } = useContext(AppContext);
   return (
     <>
       <Link
-        className={styles.logo_wrapper}
+        className={
+          toggleScheme
+            ? `${styles.logo_wrapper} ${styles.dark}`
+            : styles.logo_wrapper
+        }
         to="/"
         onClick={() => (openMobile ? setOpenMobile(false) : "")}
       >
