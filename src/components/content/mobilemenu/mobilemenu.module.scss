@@ -2,13 +2,13 @@
 
 .mobile_menu_wrapper {
   z-index: 1000;
-
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
   .mobile_toggle_wrapper {
     $timing: 500ms;
     cursor: pointer;
-    @media screen and (min-width: 1280px) {
-      display: none;
-    }
+
     height: 80px;
     width: 80px;
     display: flex;

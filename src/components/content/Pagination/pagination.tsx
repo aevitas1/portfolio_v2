@@ -23,7 +23,6 @@ export default function Pagination({
   const pageNums = getPaginationItems(currentPage, lastPage, maxLength);
   // Enable href + baseURL if switching to different pages via URL
   // const baseURL = "/projects";
-  console.log(currentPage);
   return (
     <nav className={styles.pagination} aria-label="Pagination">
       <PageLink
