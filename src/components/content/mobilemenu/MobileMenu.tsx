@@ -3,11 +3,17 @@ import { useContext } from "react";
 import { AppContext } from "../../../context/AppContext";
 
 export const MobileMenu = () => {
-  const { openMobile, setOpenMobile } = useContext(AppContext);
+  const { openMobile, setOpenMobile, toggleScheme } = useContext(AppContext);
 
   return (
     <>
-      <div className={styles.mobile_menu_wrapper}>
+      <div
+        className={
+          toggleScheme
+            ? `${styles.dark} ${styles.mobile_menu_wrapper}`
+            : styles.mobile_menu_wrapper
+        }
+      >
         <div
           className={styles.mobile_toggle_wrapper}
           onClick={() =>
