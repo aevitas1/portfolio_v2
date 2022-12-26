@@ -24,7 +24,7 @@ type cardProps = {
   usedReact: boolean;
   usedTypescript: boolean;
 };
-
+// Todo: reduce file size of project images
 const Card = (props: cardProps) => {
   return (
     <>

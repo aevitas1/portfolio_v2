@@ -14,21 +14,20 @@
     &::after {
       content: "";
       position: absolute;
-      border-image: url("../../../assets/dm_bg.png") 30%;
       height: 150px;
       width: 150px;
       pointer-events: none;
     }
     &::before {
-      border-top: var.$borderWidth solid transparent;
-      border-left: var.$borderWidth solid transparent;
+      border-top: var.$borderWidth solid var.$borderColor;
+      border-left: var.$borderWidth solid var.$borderColor;
       left: 1rem;
       top: 1rem;
       clip-path: polygon(0 0, 0% 100%, 100% 0);
     }
     &::after {
-      border-bottom: var.$borderWidth solid transparent;
-      border-right: var.$borderWidth solid transparent;
+      border-bottom: var.$borderWidth solid var.$borderColor;
+      border-right: var.$borderWidth solid var.$borderColor;
       bottom: 1rem;
       right: 1rem;
       clip-path: polygon(100% 100%, 0% 100%, 100% 0);
@@ -65,9 +64,13 @@
       max-height: calc(var(--vh) - var.$defaultHeight);
     }
     &.dark {
-      &::before,
+      &::before {
+        border-top: var.$borderWidth solid var.$borderColorDark;
+        border-left: var.$borderWidth solid var.$borderColorDark;
+      }
       &::after {
-        border-image: url("../../../assets/lm_bg.png") 30%;
+        border-bottom: var.$borderWidth solid var.$borderColorDark;
+        border-right: var.$borderWidth solid var.$borderColorDark;
       }
     }
   }

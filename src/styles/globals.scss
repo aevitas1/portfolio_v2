@@ -3,6 +3,7 @@
 
 body {
   font-family: var.$textFont;
+  transform: color 200ms ease-out all;
   svg {
     transition: var.$transition;
   }
