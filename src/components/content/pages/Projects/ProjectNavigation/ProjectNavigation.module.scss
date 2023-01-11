@@ -1,0 +1,14 @@
+.project_navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.2;
+    }
+  }
+}

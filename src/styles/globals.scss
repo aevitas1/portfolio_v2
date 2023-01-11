@@ -11,6 +11,9 @@ body {
     color: var.$primary;
     a:hover {
       color: var.$primaryHover;
+      svg {
+        color: var.$primaryHover;
+      }
     }
     svg {
       color: var.$primary;
@@ -18,17 +21,26 @@ body {
         color: var.$primaryHover;
       }
     }
+    *::selection {
+      background-color: #adacac;
+    }
   }
   &.dark {
     color: var.$primaryDark;
     a:hover {
       color: var.$primaryHoverDark;
+      svg {
+        color: var.$primaryHoverDark;
+      }
     }
     svg {
       color: var.$primaryDark;
       &:hover {
         color: var.$primaryHoverDark;
       }
+    }
+    *::selection {
+      background-color: #414141;
     }
   }
 }
@@ -102,4 +114,5 @@ a {
 a {
   text-decoration: none;
   transition: var.$transition;
+  user-select: none;
 }
