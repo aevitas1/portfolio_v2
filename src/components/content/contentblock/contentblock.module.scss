@@ -22,14 +22,6 @@
         opacity: 1;
         transition: var.$transition;
       }
-      &.active {
-        height: calc(var(--vh) - var.$defaultHeight);
-        overflow-y: hidden;
-        h1,
-        > div {
-          opacity: 0;
-        }
-      }
     }
     @media screen and (max-width: 768px) {
       height: auto;

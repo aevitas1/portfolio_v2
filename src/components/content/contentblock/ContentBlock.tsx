@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useContext } from "react";
 import Home from "../pages/home";
 import About from "../pages/about";
@@ -11,8 +11,7 @@ import Topbar from "../../header/topbar/Topbar";
 import ProjectPageWrapper from "../pages/projects/ProjectPageWrapper";
 
 const ContentBlock = () => {
-  const projectPath = useLocation();
-  const { openMobile, toggleScheme } = useContext(AppContext);
+  const { toggleScheme } = useContext(AppContext);
 
   return (
     <>
@@ -24,21 +23,7 @@ const ContentBlock = () => {
         }
       >
         <Topbar />
-        <div
-          className={
-            // Styles for path with pagination && mobile menu open
-            projectPath.pathname === "/projects" && openMobile
-              ? `${styles.content} ${styles.active} ${styles.pagination}`
-              : // Styles for path with pagination
-              projectPath.pathname === "/projects"
-              ? `${styles.content} ${styles.pagination}`
-              : // Styles with mobile menu open
-              openMobile
-              ? `${styles.content} ${styles.active}`
-              : // Styles with mobile menu closed
-                `${styles.content}`
-          }
-        >
+        <div className={styles.content}>
           <Pageheader />
           <div className={styles.content_inner}>
             <Routes>
