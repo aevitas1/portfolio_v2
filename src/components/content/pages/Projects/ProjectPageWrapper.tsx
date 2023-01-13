@@ -1,11 +1,16 @@
+import { useLocation } from "react-router-dom";
+import { AppContext } from "../../../../context/AppContext";
 import ProjectPage from "../../projectpage/ProjectPage";
-import foodfreedom from "../../../../assets/projects/foodfreedom.png";
+import ProjectNavigation from "./ProjectNavigation/ProjectNavigation";
+
+// Project images
+import desktopFoodfreedom from "../../../../assets/projects/foodfreedom/foodfreedom_desktop.png";
+import tabletFoodfreedom from "../../../../assets/projects/foodfreedom/foodfreedom_tablet.png";
+import mobileFoodfreedom from "../../../../assets/projects/foodfreedom/foodfreedom_mobile.png";
 import calculator from "../../../../assets/projects/calc.jpg";
 import memory from "../../../../assets/projects/mem_lm.png";
 import quiz from "../../../../assets/projects/quiz.png";
-import { useLocation } from "react-router-dom";
 import styles from "./ProjectPageWrapper.module.scss";
-import ProjectNavigation from "./ProjectNavigation/ProjectNavigation";
 
 const PageOne = () => {
   const projectPath = useLocation();
@@ -14,9 +19,11 @@ const PageOne = () => {
       <div className={styles.projectWrapper}>
         {projectPath.pathname === "/projects/foodfreedom" && (
           <ProjectPage
-            image={foodfreedom}
+            desktopImage={desktopFoodfreedom}
+            tabletImage={tabletFoodfreedom}
+            mobileImage={mobileFoodfreedom}
             projectName="Foodfreedom"
-            description="First website bla di bla di lorem ipsum dolor"
+            description="First website bla di bla di lorem ipsum dolor website bla di bla di lorem ipsum dolor website bla di bla di lorem ipsum dolor website bla di bla di lorem ipsum dolor"
             usedHtml={true}
             usedCss={true}
             usedSass={true}
@@ -31,7 +38,9 @@ const PageOne = () => {
 
         {projectPath.pathname === "/projects/memory" && (
           <ProjectPage
-            image={memory}
+            desktopImage={memory}
+            tabletImage={memory}
+            mobileImage={memory}
             projectName="Memory"
             description="First game"
             usedHtml={true}
@@ -48,7 +57,9 @@ const PageOne = () => {
 
         {projectPath.pathname === "/projects/calculator" && (
           <ProjectPage
-            image={calculator}
+            desktopImage={calculator}
+            tabletImage={calculator}
+            mobileImage={calculator}
             projectName="Calculator"
             description="1 + 1 = 2"
             usedHtml={true}
@@ -65,7 +76,9 @@ const PageOne = () => {
 
         {projectPath.pathname === "/projects/tibia_damage_calculator" && (
           <ProjectPage
-            image={quiz}
+            desktopImage={quiz}
+            tabletImage={quiz}
+            mobileImage={quiz}
             projectName="Quiz app"
             description="Quiz app"
             usedHtml={true}

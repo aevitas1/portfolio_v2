@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { AppContext } from "../../../context/AppContext";
 import { FiExternalLink } from "react-icons/fi";
 import { DiCodeBadge } from "react-icons/di";
 import {
@@ -11,7 +13,9 @@ import { SiTypescript, SiReact } from "react-icons/si";
 import styles from "./ProjectPage.module.scss";
 
 type cardProps = {
-  image: string;
+  desktopImage: string;
+  tabletImage: string;
+  mobileImage: string;
   projectName: string;
   description: string;
   codeLink: string;
@@ -26,14 +30,35 @@ type cardProps = {
 };
 // Todo: reduce file size of project images
 const ProjectPage = (props: cardProps) => {
+  const { toggleScheme } = useContext(AppContext);
   return (
     <>
-      <div className={styles.projectInnerWrapper}>
+      <div
+        className={
+          toggleScheme
+            ? `${styles.dark} ${styles.projectInnerWrapper}`
+            : styles.projectInnerWrapper
+        }
+      >
         <div
           className={styles.header}
-          style={{ backgroundImage: `url(${props.image})` }}
+          // style={{ backgroundImage: `url(${props.image})` }}
         >
-          {/* <img src={props.image} alt={props.projectName} /> */}
+          <div className={styles.device}>
+            <div className={styles.tablet}>
+              <img src={props.tabletImage} alt={props.projectName} />
+            </div>
+          </div>
+          <div className={styles.device}>
+            <div className={styles.desktop}>
+              <img src={props.desktopImage} alt={props.projectName} />
+            </div>
+          </div>
+          <div className={styles.device}>
+            <div className={styles.mobile}>
+              <img src={props.mobileImage} alt={props.projectName} />
+            </div>
+          </div>
         </div>
         <div className={styles.toolset}>
           {" "}
@@ -94,7 +119,7 @@ const ProjectPage = (props: cardProps) => {
             </div>
           )}
         </div>
-        <p className="helper desc">{props.description}</p>
+        <p className={`${styles.helper} ${styles.desc}`}>{props.description}</p>
         <div className={styles.links}>
           <a href={props.codeLink} rel="noreferrer">
             <DiCodeBadge />
