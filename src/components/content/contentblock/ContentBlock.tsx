@@ -11,7 +11,7 @@ import Topbar from "../../header/topbar/Topbar";
 import ProjectPageWrapper from "../pages/projects/ProjectPageWrapper";
 
 const ContentBlock = () => {
-  const { toggleScheme } = useContext(AppContext);
+  const { openMobile, toggleScheme } = useContext(AppContext);
 
   return (
     <>
@@ -23,7 +23,11 @@ const ContentBlock = () => {
         }
       >
         <Topbar />
-        <div className={styles.content}>
+        <div
+          className={
+            openMobile ? `${styles.active} ${styles.content}` : styles.content
+          }
+        >
           <Pageheader />
           <div className={styles.content_inner}>
             <Routes>
