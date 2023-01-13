@@ -8,7 +8,7 @@ import styles from "./contentblock.module.scss";
 import { AppContext } from "../../../context/AppContext";
 import Pageheader from "../pageheader/Pageheader";
 import Topbar from "../../header/topbar/Topbar";
-import PageOne from "../pages/projects/ProjectPageWrapper";
+import ProjectPageWrapper from "../pages/projects/ProjectPageWrapper";
 
 const ContentBlock = () => {
   const projectPath = useLocation();
@@ -46,13 +46,25 @@ const ContentBlock = () => {
               <Route index path="/about" element={<About />} />
               {/* Projects */}
               <Route index path="/projects" element={<Projects />} />
-              <Route index path="/projects/foodfreedom" element={<PageOne />} />
-              <Route index path="/projects/memory" element={<PageOne />} />
-              <Route index path="/projects/calculator" element={<PageOne />} />
+              <Route
+                index
+                path="/projects/foodfreedom"
+                element={<ProjectPageWrapper />}
+              />
+              <Route
+                index
+                path="/projects/memory"
+                element={<ProjectPageWrapper />}
+              />
+              <Route
+                index
+                path="/projects/calculator"
+                element={<ProjectPageWrapper />}
+              />
               <Route
                 index
                 path="/projects/tibia_damage_calculator"
-                element={<PageOne />}
+                element={<ProjectPageWrapper />}
               />
               {/* End of projects */}
               <Route index path="/contact" element={<Contact />} />

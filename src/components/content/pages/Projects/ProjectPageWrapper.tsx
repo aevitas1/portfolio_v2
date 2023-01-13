@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import ProjectPage from "./projectpage/ProjectPage";
-import ProjectNavigation from "./ProjectNavigation/ProjectNavigation";
+import ProjectNavigation from "./projectnavigation/ProjectNavigation";
 
 // Project images
 import desktopFoodfreedom from "../../../../assets/projects/foodfreedom/foodfreedom_desktop.png";
@@ -11,7 +11,7 @@ import memory from "../../../../assets/projects/mem_lm.png";
 import quiz from "../../../../assets/projects/quiz.png";
 import styles from "./ProjectPageWrapper.module.scss";
 
-const PageOne = () => {
+const ProjectPageWrapper = () => {
   const projectPath = useLocation();
   return (
     <>
@@ -97,4 +97,4 @@ const PageOne = () => {
   );
 };
 
-export default PageOne;
+export default ProjectPageWrapper;
