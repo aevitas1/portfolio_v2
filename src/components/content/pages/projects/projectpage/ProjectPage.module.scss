@@ -6,6 +6,8 @@ $timing: 1s;
   display: flex;
   flex-flow: column;
   justify-content: center;
+  opacity: 0;
+  animation: projectDisplayAnim 1.5s 1 ease-out forwards;
   .header {
     display: flex;
     justify-content: center;
@@ -212,6 +214,15 @@ $timing: 1s;
     }
     to {
       transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes projectDisplayAnim {
+    from {
+      opacity: 0;
+    }
+    to {
       opacity: 1;
     }
   }
