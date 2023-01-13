@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import styles from "./navblock.module.scss";
 import Credits from "../credits/Credits";
-import Menu from "../Menu/Menu";
+import Menu from "../menu/Menu";
 import { AppContext } from "../../../context/AppContext";
 
 const NavBlock = () => {

@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import ProjectPage from "../../projectpage/ProjectPage";
+import ProjectPage from "./projectpage/ProjectPage";
 import ProjectNavigation from "./ProjectNavigation/ProjectNavigation";
 
 // Project images

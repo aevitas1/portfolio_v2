@@ -1,7 +1,7 @@
 import styles from "./topbar.module.scss";
-import Icons from "../Icons/Icons";
+import Icons from "../icons/Icons";
 import Logo from "../logo/Logo";
-import MobileMenu from "../mobilemenu/MobileMenu";
+import MobileMenu from "../../Navigation/mobilemenu/MobileMenu";
 
 const Topbar = () => {
   return (

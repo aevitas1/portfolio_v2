@@ -7,7 +7,7 @@ import Contact from "../pages/contact";
 import styles from "./contentblock.module.scss";
 import { AppContext } from "../../../context/AppContext";
 import Pageheader from "../pageheader/Pageheader";
-import Topbar from "../topbar/Topbar";
+import Topbar from "../../header/topbar/Topbar";
 import PageOne from "../pages/Projects/ProjectPageWrapper";
 
 const ContentBlock = () => {
