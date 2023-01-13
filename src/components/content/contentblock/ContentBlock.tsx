@@ -8,7 +8,7 @@ import styles from "./contentblock.module.scss";
 import { AppContext } from "../../../context/AppContext";
 import Pageheader from "../pageheader/Pageheader";
 import Topbar from "../../header/topbar/Topbar";
-import PageOne from "../pages/Projects/ProjectPageWrapper";
+import PageOne from "../pages/projects/ProjectPageWrapper";
 
 const ContentBlock = () => {
   const projectPath = useLocation();

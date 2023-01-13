@@ -5,8 +5,33 @@
   display: flex;
   justify-content: space-between;
   padding: 0 calc(var.$defaultPadding + var.$borderWidth);
-  @media screen and (max-width: 400px) {
-    padding: calc(var.$defaultPadding / 1.5)
+  @media screen and (max-width: 500px) {
+    padding: calc(var.$defaultPadding / 3.5)
       calc(calc(var.$defaultPadding / 1.5) + calc(var.$borderWidth * 0.75));
+  }
+  @media screen and (max-width: 400px) {
+  }
+  .logo_icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    > div:last-of-type {
+      @media screen and (max-width: 1280px) {
+        transform: translateX(-10rem);
+      }
+      @media screen and (max-width: 900px) {
+        transform: translateX(-4rem);
+      }
+      @media screen and (max-width: 768px) {
+        transform: translateX(-1rem);
+      }
+      @media screen and (max-width: 500px) {
+        transform: translateX(0);
+        padding-top: 0.5rem;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      flex-flow: column;
+    }
   }
 }

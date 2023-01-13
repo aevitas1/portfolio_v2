@@ -7,14 +7,28 @@
   a {
     height: 32px;
     width: 32px;
+    @media screen and (max-width: 768px) {
+      height: 26px;
+      width: 26px;
+    }
     svg {
       height: 30px;
       width: 30px;
+      @media screen and (max-width: 768px) {
+        height: 26px;
+        width: 26px;
+      }
       transition: var.$transition;
       cursor: pointer;
-      &:hover {
-        height: 32px;
-        width: 32px;
+      @media (hover: hover) {
+        &:hover {
+          height: 32px;
+          width: 32px;
+          @media screen and (max-width: 768px) {
+            height: 26px;
+            width: 26px;
+          }
+        }
       }
     }
   }

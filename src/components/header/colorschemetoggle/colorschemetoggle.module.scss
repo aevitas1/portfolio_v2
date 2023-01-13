@@ -3,6 +3,10 @@
 .toggleIcon {
   width: 28px;
   height: 28px;
+  @media screen and (max-width: 768px) {
+    width: 22px;
+    height: 22px;
+  }
   cursor: pointer;
   .toggleIconInner {
     display: flex;
@@ -12,19 +16,35 @@
     transition: var.$transition;
     width: 26px;
     height: 26px;
+    @media screen and (max-width: 768px) {
+      width: 22px;
+      height: 22px;
+    }
     background-color: var.$primary;
     svg {
       width: 1.2rem;
       height: 1.2rem;
+      @media screen and (max-width: 768px) {
+        width: 1rem;
+        height: 1rem;
+      }
       color: #fafafa;
-      &:hover {
-        color: #fafafa;
+      @media (hover: hover) {
+        &:hover {
+          color: #fafafa;
+        }
       }
     }
-    &:hover {
-      width: 28px;
-      height: 28px;
-      background-color: var.$primaryHover;
+    @media (hover: hover) {
+      &:hover {
+        width: 28px;
+        height: 28px;
+        background-color: var.$primaryHover;
+        @media screen and (max-width: 768px) {
+          width: 22px;
+          height: 22px;
+        }
+      }
     }
     .sun,
     .moon {
@@ -46,13 +66,17 @@
   &.dark {
     .toggleIconInner {
       background-color: var.$primaryDark;
-      &:hover {
-        background-color: var.$primaryHoverDark;
+      @media (hover: hover) {
+        &:hover {
+          background-color: var.$primaryHoverDark;
+        }
       }
       svg {
         color: #161616;
-        &:hover {
-          color: #161616;
+        @media (hover: hover) {
+          &:hover {
+            color: #161616;
+          }
         }
       }
     }

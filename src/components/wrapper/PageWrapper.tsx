@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import styles from "./pagewrapper.module.scss";
 import ContentBlock from "../content/contentblock/ContentBlock";
-import NavBlock from "../Navigation/navblock/NavBlock";
+import NavBlock from "../navigation/navblock/NavBlock";
 import { AppContext } from "../../context/AppContext";
 
 const Pagewrapper = () => {
