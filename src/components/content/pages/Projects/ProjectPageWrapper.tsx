@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import { AppContext } from "../../../../context/AppContext";
 import ProjectPage from "../../projectpage/ProjectPage";
 import ProjectNavigation from "./ProjectNavigation/ProjectNavigation";
 
