@@ -54,17 +54,29 @@ const ProjectPage = (props: cardProps) => {
           <div className={styles.header}>
             <div className={styles.device}>
               <div className={styles.tablet}>
-                <img alt={props.projectName} ref={addSrc(props.tabletImage)} />
+                <img
+                  alt={props.projectName}
+                  ref={addSrc(props.tabletImage)}
+                  loading="lazy"
+                />
               </div>
             </div>
             <div className={styles.device}>
               <div className={styles.desktop}>
-                <img ref={addSrc(props.desktopImage)} alt={props.projectName} />
+                <img
+                  ref={addSrc(props.desktopImage)}
+                  alt={props.projectName}
+                  loading="lazy"
+                />
               </div>
             </div>
             <div className={styles.device}>
               <div className={styles.mobile}>
-                <img ref={addSrc(props.mobileImage)} alt={props.projectName} />
+                <img
+                  ref={addSrc(props.mobileImage)}
+                  alt={props.projectName}
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
