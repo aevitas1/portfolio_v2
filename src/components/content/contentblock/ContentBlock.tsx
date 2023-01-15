@@ -44,58 +44,21 @@ const ContentBlock = () => {
               <Route
                 index
                 path="/projects/foodfreedom"
-                element={
-                  <div className={styles.projectWrapper}>
-                    <Foodfreedom />
-                  </div>
-                }
-              />
-              <Route
-                index
-                path="/projects/calculator"
-                element={
-                  <div className={styles.projectWrapper}>
-                    <Calculator />
-                  </div>
-                }
-              />
-              <Route index path="/projects/memory" element={<Memory />} />
-              <Route
-                index
-                path="/projects/calculator"
-                element={
-                  <div className={styles.projectWrapper}>
-                    <Calculator />
-                  </div>
-                }
-              />
-              <Route
-                index
-                path="/projects/movies"
-                element={
-                  <div className={styles.projectWrapper}>
-                    <Movies />
-                  </div>
-                }
+                element={<Foodfreedom />}
               />
               <Route
                 index
                 path="/projects/tibia_damage_calculator"
-                element={
-                  <div className={styles.projectWrapper}>
-                    <TibiaDamageCalc />
-                  </div>
-                }
+                element={<TibiaDamageCalc />}
               />
+              <Route index path="/projects/quiz" element={<Quiz />} />
+              <Route index path="/projects/movies" element={<Movies />} />
               <Route
                 index
-                path="/projects/quiz"
-                element={
-                  <div className={styles.projectWrapper}>
-                    <Quiz />
-                  </div>
-                }
+                path="/projects/calculator"
+                element={<Calculator />}
               />
+              <Route index path="/projects/memory" element={<Memory />} />
               {/* End of projects */}
               <Route index path="/contact" element={<Contact />} />
               <Route path="/*" element={<Home />} />

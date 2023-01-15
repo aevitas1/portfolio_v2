@@ -14,6 +14,8 @@ const Pageheader = () => {
         {projectPath.pathname === "/projects/calculator" && "Calculator"}
         {projectPath.pathname === "/projects/tibia_damage_calculator" &&
           "Tibia damage calculator"}
+        {projectPath.pathname === "/projects/quiz" && "Quiz"}
+        {projectPath.pathname === "/projects/movies" && "Movies"}
         {projectPath.pathname === "/contact" && "Contact"}
       </h1>
     </>
