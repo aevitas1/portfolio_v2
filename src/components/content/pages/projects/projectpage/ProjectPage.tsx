@@ -133,10 +133,10 @@ const ProjectPage = (props: cardProps) => {
             {props.description}
           </p>
           <div className={styles.links}>
-            <a href={props.codeLink} rel="noreferrer">
+            <a href={props.codeLink} rel="noreferrer" target="_blank">
               <DiCodeBadge />
             </a>
-            <a href={props.projectLink} rel="noreferrer">
+            <a href={props.projectLink} rel="noreferrer" target="_blank">
               <FiExternalLink />
             </a>
           </div>

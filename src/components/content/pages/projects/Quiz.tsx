@@ -13,16 +13,16 @@ const Quiz = () => {
         tabletImage={tabletQuiz}
         mobileImage={mobileQuiz}
         projectName="Quiz app"
-        description="Quiz app"
+        description="A quiz app I made to explore the possibilities of API's. This is made with Open Trivia API."
         usedHtml={true}
-        usedCss={true}
-        usedSass={true}
-        usedJavascript={true}
+        usedCss={false}
+        usedSass={false}
+        usedJavascript={false}
         usedBootstrap={true}
-        usedTypescript={true}
+        usedTypescript={false}
         usedReact={true}
-        codeLink="www.google.nl"
-        projectLink="www.google.com"
+        codeLink="https://github.com/aevitas1/trivia"
+        projectLink="https://react-trivia-app20.netlify.app"
       />
 
       <ProjectNavigation

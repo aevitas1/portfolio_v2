@@ -13,16 +13,16 @@ const TibiaDamageCalc = () => {
         tabletImage={tabletTibia}
         mobileImage={mobileTibia}
         projectName="Tibia damage calculator"
-        description="Tibia app"
+        description="A damage calculator for a game called Tibia. I noticed a demand for a calculator so I made it. This is still being used by some players."
         usedHtml={true}
-        usedCss={true}
-        usedSass={true}
-        usedJavascript={true}
-        usedBootstrap={true}
-        usedTypescript={true}
+        usedCss={false}
+        usedSass={false}
+        usedJavascript={false}
+        usedBootstrap={false}
+        usedTypescript={false}
         usedReact={true}
-        codeLink="www.google.nl"
-        projectLink="www.google.com"
+        codeLink="https://github.com/aevitas1/tibia"
+        projectLink="https://app.netlify.com/sites/tibia-calculator"
       />
 
       <ProjectNavigation

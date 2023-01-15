@@ -13,16 +13,17 @@ const Foodfreedom = () => {
         tabletImage={tabletFoodfreedom}
         mobileImage={mobileFoodfreedom}
         projectName="Foodfreedom"
-        description="First website bla di bla di lorem ipsum dolor website bla di bla di lorem ipsum dolor website bla di bla di lorem ipsum dolor website bla di bla di lorem ipsum dolor"
+        description="First website I made during my Professional Webdesigner course. It's made with HTML, CSS and JavaScript. The 'recepten' and 'Chocolade fondant' pages are made with Bootstrap, as
+        required in the task."
         usedHtml={true}
         usedCss={true}
-        usedSass={true}
+        usedSass={false}
         usedJavascript={true}
         usedBootstrap={true}
-        usedTypescript={true}
-        usedReact={true}
-        codeLink="www.google.nl"
-        projectLink="www.google.com"
+        usedTypescript={false}
+        usedReact={false}
+        codeLink="https://github.com/aevitas1/aevitas1.github.io"
+        projectLink="https://aevitas1.github.io/"
       />
 
       <ProjectNavigation

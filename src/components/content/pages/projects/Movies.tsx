@@ -13,16 +13,16 @@ const Movies = () => {
         tabletImage={tabletMovies}
         mobileImage={mobileMovies}
         projectName="Movie app"
-        description="Movie app"
+        description="A movie app which pulls data from The Movie Database. This is a work in progress."
         usedHtml={true}
-        usedCss={true}
+        usedCss={false}
         usedSass={true}
-        usedJavascript={true}
-        usedBootstrap={true}
-        usedTypescript={true}
+        usedJavascript={false}
+        usedBootstrap={false}
+        usedTypescript={false}
         usedReact={true}
-        codeLink="www.google.nl"
-        projectLink="www.google.com"
+        codeLink="https://github.com/aevitas1/movies"
+        projectLink="https://movie-app-react-tmdb.netlify.app"
       />
 
       <ProjectNavigation

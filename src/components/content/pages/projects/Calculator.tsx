@@ -13,16 +13,16 @@ const Calculator = () => {
         tabletImage={tabletCalculator}
         mobileImage={mobileCalculator}
         projectName="Calculator"
-        description="1 + 1 = 2"
+        description="A calculator which I had to make for my JavaScript course."
         usedHtml={true}
         usedCss={true}
-        usedSass={true}
+        usedSass={false}
         usedJavascript={true}
-        usedBootstrap={true}
-        usedTypescript={true}
-        usedReact={true}
-        codeLink="www.google.nl"
-        projectLink="www.google.com"
+        usedBootstrap={false}
+        usedTypescript={false}
+        usedReact={false}
+        codeLink="https://github.com/aevitas1/rekenmachine"
+        projectLink="https://svdm-calculator.netlify.app"
       />
 
       <ProjectNavigation

@@ -13,16 +13,16 @@ const Memory = () => {
         tabletImage={tabletMemory}
         mobileImage={mobileMemory}
         projectName="Memory"
-        description="First game"
+        description="A memory game which I had to make for my JavaScript course. This was the final assignment."
         usedHtml={true}
         usedCss={true}
-        usedSass={true}
+        usedSass={false}
         usedJavascript={true}
-        usedBootstrap={true}
-        usedTypescript={true}
-        usedReact={true}
-        codeLink="www.google.nl"
-        projectLink="www.google.com"
+        usedBootstrap={false}
+        usedTypescript={false}
+        usedReact={false}
+        codeLink="https://github.com/aevitas1/memory_game"
+        projectLink="https://stephan-memory-game.netlify.app"
       />
 
       <ProjectNavigation
