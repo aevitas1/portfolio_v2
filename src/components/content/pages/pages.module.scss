@@ -23,4 +23,15 @@
       width: fit-content;
     }
   }
+
+  .home {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 80%;
+    .cta_row {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
 }

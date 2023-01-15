@@ -1,0 +1,66 @@
+@use "../../../styles/var.scss" as var;
+
+.button {
+  .topborder,
+  .bottomborder {
+    position: relative;
+  }
+
+  .topborder {
+    &::before {
+      content: "";
+      position: absolute;
+      transform: translateX(-50%, 50%);
+      width: 20px;
+      height: 20px;
+      left: -0.5rem;
+      bottom: -0.5rem;
+      border-top: 3px solid var.$borderColor;
+      border-left: 3px solid var.$borderColor;
+      transition: 0.25s ease-out all;
+      clip-path: polygon(0 0, 0% 100%, 100% 0);
+    }
+  }
+
+  .bottomborder {
+    &::after {
+      content: "";
+      position: absolute;
+      transform: translateX(-50%, 50%);
+      right: -0.5rem;
+      top: -0.5rem;
+      width: 20px;
+      height: 20px;
+      border-bottom: 3px solid var.$borderColor;
+      border-right: 3px solid var.$borderColor;
+      transition: 0.25s ease-out all;
+      clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    }
+  }
+
+  &:hover {
+    .topborder::before,
+    .bottomborder::after {
+      height: 42px;
+      width: calc(100% + 1rem);
+    }
+    .topborder::before {
+      bottom: -30px;
+      clip-path: unset;
+    }
+    .bottomborder::after {
+      top: -30px;
+      clip-path: unset;
+    }
+  }
+  &.dark {
+    .topborder::before {
+      border-top: 3px solid var.$borderColorDark;
+      border-left: 3px solid var.$borderColorDark;
+    }
+    .bottomborder::after {
+      border-bottom: 3px solid var.$borderColorDark;
+      border-right: 3px solid var.$borderColorDark;
+    }
+  }
+}
