@@ -1,30 +1,30 @@
 import styles from "./ProjectNavigation.module.scss";
 import { useContext } from "react";
 import { AppContext } from "../../../../../context/AppContext";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
 
-const ProjectNavigation = () => {
-  const projectPath = useLocation();
+type navigationProps = {
+  next: string;
+  previous: string;
+  firstProject: boolean;
+  lastProject: boolean;
+};
+
+const ProjectNavigation = (props: navigationProps) => {
   const { toggleScheme } = useContext(AppContext);
   return (
     <div
       className={
-        toggleScheme ? `${styles.project_navigation} ${styles.dark}` : ""
+        toggleScheme
+          ? `${styles.project_navigation} ${styles.dark}`
+          : styles.project_navigation
       }
     >
       <NavLink
-        to={
-          projectPath.pathname === "/projects/memory"
-            ? "/projects/foodfreedom"
-            : projectPath.pathname === "/projects/calculator"
-            ? "/projects/memory"
-            : projectPath.pathname === "/projects/tibia_damage_calculator"
-            ? "/projects/calculator"
-            : "#"
-        }
+        to={props.firstProject ? "" : props.previous}
         className={
-          projectPath.pathname === "/projects/foodfreedom"
+          props.firstProject
             ? `${styles.disabled} ${styles.pagination_btn}`
             : styles.pagination_btn
         }
@@ -37,17 +37,9 @@ const ProjectNavigation = () => {
       </NavLink>
 
       <NavLink
-        to={
-          projectPath.pathname === "/projects/foodfreedom"
-            ? "/projects/memory"
-            : projectPath.pathname === "/projects/memory"
-            ? "/projects/calculator"
-            : projectPath.pathname === "/projects/calculator"
-            ? "/projects/tibia_damage_calculator"
-            : "#"
-        }
+        to={props.lastProject ? "" : props.next}
         className={
-          projectPath.pathname === "/projects/tibia_damage_calculator"
+          props.lastProject
             ? `${styles.disabled} ${styles.pagination_btn}`
             : styles.pagination_btn
         }
