@@ -51,9 +51,10 @@ $timing: 1s;
           border: 0.5rem solid var.$deviceBorder;
           border-bottom: 1rem solid var.$deviceBorder;
           width: 280px;
-          height: auto;
+          height: 172.5px;
           border-radius: 5px;
           @media screen and (max-width: 500px) {
+            height: 113px;
             width: 180px;
             border: 0.3rem solid var.$deviceBorder;
             border-bottom: 0.8rem solid var.$deviceBorder;
@@ -65,9 +66,10 @@ $timing: 1s;
           border: 0.2rem solid var.$deviceBorder;
           border-bottom: 0.9rem solid var.$deviceBorder;
           width: 120px;
-          height: auto;
+          height: 169px;
           border-radius: 3px;
           @media screen and (max-width: 500px) {
+            height: 116px;
             width: 80px;
           }
         }
@@ -83,9 +85,10 @@ $timing: 1s;
           border: 0.2rem solid var.$deviceBorder;
           border-bottom: 0.6rem solid var.$deviceBorder;
           width: 60px;
-          height: auto;
+          height: 129px;
           border-radius: 3px;
           @media screen and (max-width: 500px) {
+            height: 86px;
             width: 40px;
           }
         }
