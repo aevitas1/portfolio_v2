@@ -1,11 +1,18 @@
 import styles from "./ProjectNavigation.module.scss";
+import { useContext } from "react";
+import { AppContext } from "../../../../../context/AppContext";
 import { NavLink, useLocation } from "react-router-dom";
 import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
 
 const ProjectNavigation = () => {
   const projectPath = useLocation();
+  const { toggleScheme } = useContext(AppContext);
   return (
-    <div className={styles.project_navigation}>
+    <div
+      className={
+        toggleScheme ? `${styles.project_navigation} ${styles.dark}` : ""
+      }
+    >
       <NavLink
         to={
           projectPath.pathname === "/projects/memory"
@@ -18,14 +25,16 @@ const ProjectNavigation = () => {
         }
         className={
           projectPath.pathname === "/projects/foodfreedom"
-            ? styles.disabled
-            : ""
+            ? `${styles.disabled} ${styles.pagination_btn}`
+            : styles.pagination_btn
         }
       >
         <AiOutlineCaretLeft /> Previous
       </NavLink>
 
-      <NavLink to="/projects">Back</NavLink>
+      <NavLink to="/projects" className={styles.pagination_btn}>
+        Back
+      </NavLink>
 
       <NavLink
         to={
@@ -39,8 +48,8 @@ const ProjectNavigation = () => {
         }
         className={
           projectPath.pathname === "/projects/tibia_damage_calculator"
-            ? styles.disabled
-            : ""
+            ? `${styles.disabled} ${styles.pagination_btn}`
+            : styles.pagination_btn
         }
       >
         Next <AiOutlineCaretRight />

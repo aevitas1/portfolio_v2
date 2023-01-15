@@ -1,5 +1,13 @@
-import Pagewrapper from "./components/wrapper/PageWrapper";
+import { useContext } from "react";
 import { AppProvider } from "./context/AppContext";
+import { AppContext } from "./context/AppContext";
+import ContentBlock from "./components/content/contentblock/ContentBlock";
+import NavBlock from "./components/navigation/navblock/NavBlock";
+
+import "./styles/globals.scss";
+import "/fonts/coolvetica_condensed_rg.ttf";
+import "/fonts/ClashDisplay-Variable.ttf";
+import "/fonts/Inter-VariableFont_slnt_wght.ttf";
 
 function App() {
   // Mobile 100vh fix to avoid vertical scrollbar
@@ -17,11 +25,17 @@ function App() {
 
   // Recalculate on device orientation change
   window.addEventListener("orientationchange", calculateVh);
+  const { toggleScheme } = useContext(AppContext);
 
   return (
     <>
       <AppProvider>
-        <Pagewrapper />
+        <div className={toggleScheme ? "pagewrapper dark" : "pagewrapper"}>
+          <main className={"inner_wrapper"}>
+            <ContentBlock />
+            <NavBlock />
+          </main>
+        </div>
       </AppProvider>
     </>
   );

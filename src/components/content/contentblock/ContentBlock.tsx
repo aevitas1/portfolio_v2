@@ -8,7 +8,13 @@ import styles from "./contentblock.module.scss";
 import { AppContext } from "../../../context/AppContext";
 import Pageheader from "../pageheader/Pageheader";
 import Topbar from "../../header/topbar/Topbar";
-import ProjectPageWrapper from "../pages/projects/ProjectPageWrapper";
+
+import Foodfreedom from "../pages/projects/Foodfreedom";
+import Quiz from "../pages/projects/Quiz";
+import Memory from "../pages/projects/Memory";
+import TibiaDamageCalc from "../pages/projects/TibiaDamageCalc";
+import Calculator from "../pages/projects/Calculator";
+import Movies from "../pages/projects/Movies";
 
 const ContentBlock = () => {
   const { openMobile, toggleScheme } = useContext(AppContext);
@@ -38,22 +44,57 @@ const ContentBlock = () => {
               <Route
                 index
                 path="/projects/foodfreedom"
-                element={<ProjectPageWrapper />}
-              />
-              <Route
-                index
-                path="/projects/memory"
-                element={<ProjectPageWrapper />}
+                element={
+                  <div className={styles.projectWrapper}>
+                    <Foodfreedom />
+                  </div>
+                }
               />
               <Route
                 index
                 path="/projects/calculator"
-                element={<ProjectPageWrapper />}
+                element={
+                  <div className={styles.projectWrapper}>
+                    <Calculator />
+                  </div>
+                }
+              />
+              <Route index path="/projects/memory" element={<Memory />} />
+              <Route
+                index
+                path="/projects/calculator"
+                element={
+                  <div className={styles.projectWrapper}>
+                    <Calculator />
+                  </div>
+                }
+              />
+              <Route
+                index
+                path="/projects/movies"
+                element={
+                  <div className={styles.projectWrapper}>
+                    <Movies />
+                  </div>
+                }
               />
               <Route
                 index
                 path="/projects/tibia_damage_calculator"
-                element={<ProjectPageWrapper />}
+                element={
+                  <div className={styles.projectWrapper}>
+                    <TibiaDamageCalc />
+                  </div>
+                }
+              />
+              <Route
+                index
+                path="/projects/quiz"
+                element={
+                  <div className={styles.projectWrapper}>
+                    <Quiz />
+                  </div>
+                }
               />
               {/* End of projects */}
               <Route index path="/contact" element={<Contact />} />

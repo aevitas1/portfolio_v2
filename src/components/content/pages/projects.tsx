@@ -12,6 +12,8 @@ const Projects = () => {
           <NavLink to="/projects/tibia_damage_calculator">
             Tibia damage calculator
           </NavLink>
+          <NavLink to="/projects/quiz">Quiz</NavLink>
+          <NavLink to="/projects/movies">Movies</NavLink>
         </div>
       </div>
     </>

@@ -1,14 +1,24 @@
+@use "../../../../../styles/var.scss" as var;
+
 .project_navigation {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  a {
+  a.pagination_btn {
     display: flex;
     align-items: center;
     gap: 0.25rem;
     &.disabled {
       pointer-events: none;
       opacity: 0.2;
+    }
+    &::visited {
+      color: var.$primary;
+    }
+  }
+  &.dark {
+    a::visited {
+      color: var.$primaryDark;
     }
   }
 }
