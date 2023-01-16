@@ -1,4 +1,4 @@
-import styles from "./ProjectNavigation.module.scss";
+import styles from "./projectnavigation.module.scss";
 import { useContext } from "react";
 import { AppContext } from "../../../../../context/AppContext";
 import { NavLink } from "react-router-dom";

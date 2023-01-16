@@ -9,6 +9,7 @@ const Pageheader = () => {
         {projectPath.pathname === "/" && "Welcome"}
         {projectPath.pathname === "/about" && "About me"}
         {projectPath.pathname === "/projects" && "Projects"}
+        {projectPath.pathname === "/projects/portfolio" && "Portfolio"}
         {projectPath.pathname === "/projects/foodfreedom" && "Foodfreedom"}
         {projectPath.pathname === "/projects/memory" && "Memory game"}
         {projectPath.pathname === "/projects/calculator" && "Calculator"}

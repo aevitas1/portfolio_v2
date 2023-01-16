@@ -130,8 +130,14 @@ $timing: 1s;
       }
       .logo_container {
         position: relative;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           cursor: pointer;
           position: relative;
           svg {
@@ -146,6 +152,12 @@ $timing: 1s;
           opacity: 0;
           left: 50%;
           transform: translate(-50%, 0);
+        }
+        &.php {
+          svg {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
         }
         &:hover {
           p {
@@ -178,14 +190,6 @@ $timing: 1s;
       align-self: center;
       justify-self: flex-end;
       padding-bottom: 1.5rem;
-      a {
-        color: var.$primary;
-        transition: var.$transition;
-        cursor: pointer;
-        &:hover {
-          color: var.$primaryHover;
-        }
-      }
       svg {
         width: 2rem;
         height: 1.8rem;

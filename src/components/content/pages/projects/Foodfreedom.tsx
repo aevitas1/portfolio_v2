@@ -21,15 +21,19 @@ const Foodfreedom = () => {
         usedJavascript={true}
         usedBootstrap={true}
         usedTypescript={false}
+        usedPostcss={false}
+        usedNextjs={false}
+        usedPhp={false}
         usedReact={false}
+        usedNextui={false}
         codeLink="https://github.com/aevitas1/aevitas1.github.io"
         projectLink="https://aevitas1.github.io/"
       />
 
       <ProjectNavigation
         next={"/projects/tibia_damage_calculator"}
-        previous={""}
-        firstProject={true}
+        previous={"/projects/portfolio"}
+        firstProject={false}
         lastProject={false}
       />
     </div>

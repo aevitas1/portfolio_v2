@@ -9,8 +9,9 @@ import {
   IoLogoSass,
 } from "react-icons/io";
 import { BsBootstrapFill } from "react-icons/bs";
-import { SiTypescript, SiReact } from "react-icons/si";
-import styles from "./ProjectPage.module.scss";
+import { SiTypescript, SiReact, SiPostcss, SiPhp } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import styles from "./projectpage.module.scss";
 
 type cardProps = {
   desktopImage: string;
@@ -25,8 +26,12 @@ type cardProps = {
   usedHtml: boolean;
   usedJavascript: boolean;
   usedSass: boolean;
+  usedPostcss: boolean;
   usedReact: boolean;
+  usedNextui: boolean;
   usedTypescript: boolean;
+  usedNextjs: boolean;
+  usedPhp: boolean;
 };
 // Todo: reduce file size of project images
 const ProjectPage = (props: cardProps) => {
@@ -70,7 +75,7 @@ const ProjectPage = (props: cardProps) => {
           </div>
           <div className={styles.toolset}>
             {props.usedHtml && (
-              <div className={`${styles.logo_container} ${styles.html}`}>
+              <div className={styles.logo_container}>
                 <i>
                   <IoLogoHtml5 />
                 </i>
@@ -78,7 +83,7 @@ const ProjectPage = (props: cardProps) => {
               </div>
             )}
             {props.usedCss && (
-              <div className={`${styles.logo_container} ${styles.css}`}>
+              <div className={styles.logo_container}>
                 <i>
                   <IoLogoCss3 />
                 </i>
@@ -86,7 +91,7 @@ const ProjectPage = (props: cardProps) => {
               </div>
             )}
             {props.usedJavascript && (
-              <div className={`${styles.logo_container} ${styles.javascript}`}>
+              <div className={styles.logo_container}>
                 <i>
                   <IoLogoJavascript />
                 </i>
@@ -94,15 +99,23 @@ const ProjectPage = (props: cardProps) => {
               </div>
             )}
             {props.usedSass && (
-              <div className={`${styles.logo_container} ${styles.sass}`}>
+              <div className={styles.logo_container}>
                 <i>
                   <IoLogoSass />
                 </i>
                 <p className="helper">SASS</p>
               </div>
             )}
+            {props.usedPostcss && (
+              <div className={styles.logo_container}>
+                <i>
+                  <SiPostcss />
+                </i>
+                <p className="helper">PostCSS</p>
+              </div>
+            )}
             {props.usedBootstrap && (
-              <div className={`${styles.logo_container} ${styles.bootstrap}`}>
+              <div className={styles.logo_container}>
                 <i>
                   <BsBootstrapFill />
                 </i>
@@ -110,7 +123,7 @@ const ProjectPage = (props: cardProps) => {
               </div>
             )}
             {props.usedTypescript && (
-              <div className={`${styles.logo_container} ${styles.typescript}`}>
+              <div className={styles.logo_container}>
                 <i>
                   <SiTypescript />
                 </i>
@@ -118,11 +131,27 @@ const ProjectPage = (props: cardProps) => {
               </div>
             )}
             {props.usedReact && (
-              <div className={`${styles.logo_container} ${styles.react}`}>
+              <div className={styles.logo_container}>
                 <i>
                   <SiReact />
                 </i>
                 <p className="helper">React</p>
+              </div>
+            )}
+            {props.usedNextjs && (
+              <div className={styles.logo_container}>
+                <i>
+                  <TbBrandNextjs />
+                </i>
+                <p className="helper">NextJS</p>
+              </div>
+            )}
+            {props.usedPhp && (
+              <div className={`${styles.logo_container} ${styles.php}`}>
+                <i>
+                  <SiPhp />
+                </i>
+                <p className="helper">PHP</p>
               </div>
             )}
           </div>
@@ -130,7 +159,12 @@ const ProjectPage = (props: cardProps) => {
 
         <div className={styles.bottom}>
           <p className={`${styles.helper} ${styles.desc}`}>
-            {props.description}
+            {props.description}{" "}
+            {props.usedNextui && (
+              <a href="https://nextui.org/" rel="norefererrer" target="_blank">
+                Next UI.
+              </a>
+            )}
           </p>
           <div className={styles.links}>
             <a href={props.codeLink} rel="noreferrer" target="_blank">

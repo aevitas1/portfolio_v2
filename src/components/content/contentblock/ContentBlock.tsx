@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import { useContext } from "react";
-import Home from "../pages/home";
-import About from "../pages/about";
-import Projects from "../pages/projects";
-import Contact from "../pages/contact";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Projects from "../pages/Projects";
+import Contact from "../pages/Contact";
+import Portfolio from "../pages/projects/Portfolio";
 import styles from "./contentblock.module.scss";
 import { AppContext } from "../../../context/AppContext";
 import Pageheader from "../pageheader/Pageheader";
@@ -41,6 +42,7 @@ const ContentBlock = () => {
               <Route index path="/about" element={<About />} />
               {/* Projects */}
               <Route index path="/projects" element={<Projects />} />
+              <Route index path="/projects/portfolio" element={<Portfolio />} />
               <Route
                 index
                 path="/projects/foodfreedom"

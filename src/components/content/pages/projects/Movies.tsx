@@ -20,7 +20,11 @@ const Movies = () => {
         usedJavascript={false}
         usedBootstrap={false}
         usedTypescript={false}
+        usedPostcss={false}
+        usedNextjs={false}
+        usedPhp={false}
         usedReact={true}
+        usedNextui={false}
         codeLink="https://github.com/aevitas1/movies"
         projectLink="https://movie-app-react-tmdb.netlify.app"
       />

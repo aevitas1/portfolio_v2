@@ -1,4 +1,105 @@
+$timing: 1s;
 .projectwrapper {
   display: flex;
   flex-flow: column;
+}
+.portfolio {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: stretch;
+
+  .top,
+  .bottom {
+    display: flex;
+    flex-flow: column;
+  }
+  .top {
+    align-items: stretch;
+  }
+  .toolset {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: min(400px, 80vw);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    .logo_container:nth-of-type(even) {
+      animation: iconAnimLeft $timing 1 ease-out 1s forwards;
+      opacity: 0;
+    }
+    .logo_container:nth-of-type(odd) {
+      animation: iconAnimRight $timing 1 ease-out 1s forwards;
+      opacity: 0;
+    }
+    .logo_container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
+      p {
+        position: absolute;
+        display: none;
+        bottom: 0rem;
+        opacity: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      &:hover {
+        p {
+          display: block;
+          bottom: 1.5rem;
+          opacity: 1;
+          z-index: 100;
+        }
+      }
+    }
+  }
+  .codelink {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    svg {
+      width: 2rem;
+      height: 1.8rem;
+    }
+  }
+}
+@keyframes iconAnimLeft {
+  0% {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes iconAnimRight {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

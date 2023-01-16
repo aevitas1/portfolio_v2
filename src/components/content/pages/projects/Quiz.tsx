@@ -20,7 +20,11 @@ const Quiz = () => {
         usedJavascript={false}
         usedBootstrap={true}
         usedTypescript={false}
+        usedPostcss={false}
+        usedNextjs={false}
+        usedPhp={false}
         usedReact={true}
+        usedNextui={false}
         codeLink="https://github.com/aevitas1/trivia"
         projectLink="https://react-trivia-app20.netlify.app"
       />

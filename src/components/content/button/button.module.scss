@@ -1,6 +1,8 @@
 @use "../../../styles/var.scss" as var;
 
 .button {
+  padding: 2rem;
+  width: fit-content;
   .topborder,
   .bottomborder {
     position: relative;
@@ -38,19 +40,21 @@
     }
   }
 
-  &:hover {
-    .topborder::before,
-    .bottomborder::after {
-      height: 42px;
-      width: calc(100% + 1rem);
-    }
-    .topborder::before {
-      bottom: -30px;
-      clip-path: unset;
-    }
-    .bottomborder::after {
-      top: -30px;
-      clip-path: unset;
+  @media (hover: hover) {
+    &:hover {
+      .topborder::before,
+      .bottomborder::after {
+        height: 42px;
+        width: calc(100% + 1rem);
+      }
+      .topborder::before {
+        bottom: -30px;
+        clip-path: unset;
+      }
+      .bottomborder::after {
+        top: -30px;
+        clip-path: unset;
+      }
     }
   }
   &.dark {

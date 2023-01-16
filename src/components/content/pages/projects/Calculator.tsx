@@ -13,14 +13,18 @@ const Calculator = () => {
         tabletImage={tabletCalculator}
         mobileImage={mobileCalculator}
         projectName="Calculator"
-        description="A calculator which I had to make for my JavaScript course."
+        description="A calculator which I made for my JavaScript course."
         usedHtml={true}
         usedCss={true}
         usedSass={false}
         usedJavascript={true}
         usedBootstrap={false}
         usedTypescript={false}
+        usedPostcss={false}
+        usedNextjs={false}
+        usedPhp={false}
         usedReact={false}
+        usedNextui={false}
         codeLink="https://github.com/aevitas1/rekenmachine"
         projectLink="https://svdm-calculator.netlify.app"
       />

@@ -6,6 +6,7 @@ const Projects = () => {
     <>
       <div className={`${styles.page_wrapper}`}>
         <div className={styles.project_container}>
+          <NavLink to="/projects/portfolio">This portfolio</NavLink>
           <NavLink to="/projects/foodfreedom">Foodfreedom</NavLink>
           <NavLink to="/projects/tibia_damage_calculator">
             Tibia damage calculator
