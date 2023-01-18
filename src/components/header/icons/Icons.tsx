@@ -26,7 +26,11 @@ const Icons = () => {
         <a href="https://github.com/aevitas1" rel="noreferrer" target="_blank">
           <FaGithubSquare />
         </a>
-        <a href="#" rel="noreferrer" target="_blank">
+        <a
+          href="mailto: sfhvdmeijden@gmail.com"
+          rel="noreferrer"
+          target="_blank"
+        >
           <BsFillEnvelopeFill />
         </a>
         <ColorSchemeToggle />

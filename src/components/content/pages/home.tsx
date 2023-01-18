@@ -1,5 +1,6 @@
 import styles from "./pages.module.scss";
 import Button from "../button/Button";
+import CircularSkills from "../circularskills/CircularSkills";
 
 const Home = () => {
   let d = new Date();
@@ -31,6 +32,7 @@ const Home = () => {
             <br></br> I am a self-taught Front-end Developer. <br></br>Eager to
             learn and eventually become a Full-stack Developer.
           </p>
+          <CircularSkills />
           <div className={styles.cta_row}>
             <Button link="/projects" text="Projects" newtab={false} />
             <Button link="/about" text="About me" newtab={false} />
