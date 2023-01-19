@@ -1,20 +1,20 @@
 import styles from "./pages.module.scss";
 import Button from "../button/Button";
-import CircularSkills from "../circularskills/CircularSkills";
+import Skills from "../skills/Skills";
 
 const Home = () => {
-  let d = new Date();
-  let currentMonth = d.getMonth();
-  let currentYear = d.getFullYear();
-  let currentDay = d.getDate();
+  let d: any = new Date();
+  let currentMonth: number = d.getMonth();
+  let currentYear: number = d.getFullYear();
+  let currentDay: number = d.getDate();
 
-  let age = 0;
+  let age: number = 0;
 
   const calcAge = () => {
-    const birthDay = 10;
-    const birthMonth = 8;
-    const birthYear = 1990;
-    let realCurrentMonth = currentMonth + 1;
+    const birthDay: number = 10;
+    const birthMonth: number = 8;
+    const birthYear: number = 1990;
+    let realCurrentMonth: number = currentMonth + 1;
     age = currentYear - (birthYear + 1);
 
     if (realCurrentMonth >= birthMonth && currentDay >= birthDay) {
@@ -32,7 +32,7 @@ const Home = () => {
             <br></br> I am a self-taught Front-end Developer. <br></br>Eager to
             learn and eventually become a Full-stack Developer.
           </p>
-          <CircularSkills />
+          <Skills />
           <div className={styles.cta_row}>
             <Button link="/projects" text="Projects" newtab={false} />
             <Button link="/about" text="About me" newtab={false} />
