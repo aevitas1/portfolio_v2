@@ -14,7 +14,7 @@ const Foodfreedom = () => {
         mobileImage={mobileFoodfreedom}
         projectName="Foodfreedom"
         description="First website I made during my Professional Webdesigner course. It's made with HTML, CSS and JavaScript. The 'recepten' and 'Chocolade fondant' pages are made with Bootstrap, as
-        required in the task."
+        required in the task. The only content given to me was a logo and business card, so that's where I got the colors from. Design and all content is by me."
         usedHtml={true}
         usedCss={true}
         usedSass={false}
