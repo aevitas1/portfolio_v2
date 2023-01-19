@@ -23,7 +23,6 @@
       width: fit-content;
     }
   }
-
   .home {
     display: flex;
     flex-flow: column;
@@ -33,13 +32,14 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      @media screen and (max-width: 500px) {
-        flex-flow: column;
-        align-items: center;
-      }
     }
     a {
       width: fit-content;
     }
+  }
+
+  &.about {
+    justify-content: flex-start;
+    gap: 1rem;
   }
 }

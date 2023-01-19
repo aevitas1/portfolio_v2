@@ -1,22 +1,33 @@
 import styles from "./pages.module.scss";
+import Button from "../button/Button";
+
 const About = () => {
   return (
     <>
       <div className={`${styles.page_wrapper} ${styles.about}`}>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          aut quos repellendus commodi expedita doloremque fugit aliquam fugiat
-          molestiae consequatur quaerat eius ipsa, delectus cumque. Esse nemo,
-          saepe aliquid iure doloribus molestias itaque porro repellendus
-          ratione? Non nobis sunt autem nihil pariatur quis et, placeat alias
-          expedita provident unde asperiores quo voluptatibus cum adipisci!
-          Libero ipsam harum qui deleniti ut accusamus dolores aliquam error ex
-          vero, quod quo iste voluptatem soluta aut quaerat, sapiente placeat,
-          dolore quia quisquam dolor at illo iusto. Quam ea illo nostrum vel
-          quia expedita cumque animi, corrupti ratione minima provident commodi
-          possimus, officiis quod dignissimos quo consequatur blanditiis placeat
-          dolor, hic dolore. Sequi cupiditate libero deserunt dolore sed,
+          At the age of 14 I started working full-time in a kitchen during
+          summer. I stuck around for a bit and ended up doing this for 18 years,
+          until February 2022. However, IT has always been my bigger interest. I
+          have been interested in technology for as long as I can remember. I
+          just never knew what to do in this field.
         </p>
+        <p>
+          During one of the COVID lockdowns my wife and I sat down and she
+          suggested web development. I just pulled the trigger and went for it.
+          In July, 2021 I started coding. I started a 'Professional Webdesign'
+          course with LOI and finished this in 3 months. I continued with a 'CIW
+          JavaScript Specialist' course and successfully completed this in 2
+          months.
+        </p>
+        <p>
+          This turned out to be a great decision, not only do I now know what I
+          want to do I also have truely found a passion. At home, I am learning
+          new frameworks, mainly React, and languages (TypeScript). I've also
+          been doing a small amount of backend (NodeJS).
+        </p>
+        <p>What shall we work on next?</p>
+        <Button text="Contact me" link="/contact" newtab={false} />
       </div>
     </>
   );

@@ -2,24 +2,24 @@
 
 .button {
   position: relative;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0;
   cursor: pointer;
   width: fit-content;
   &::after {
     content: "";
     position: absolute;
     background-color: var.$borderColor;
-    width: 50%;
+    width: 75%;
     height: 0.25rem;
-    left: 25%;
+    left: 12.5%;
     bottom: 0;
     transition: 0.25s ease-out all;
     transform: skew(-15deg);
   }
   &:hover {
     &::after {
-      width: calc(100% - 1.5rem);
-      left: 0.75rem;
+      left: 0;
+      width: 100%;
       background-color: var.$primaryHover;
     }
     a {
