@@ -26,6 +26,9 @@ $timing: 1s;
           animation: fadeIn $timing ease-out 1s 1 forwards;
         }
         .item_container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
           .item:nth-of-type(even) {
             animation: iconAnimLeft $timing ease-out 1s 1 forwards;
             opacity: 0;

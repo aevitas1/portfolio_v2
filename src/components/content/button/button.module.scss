@@ -4,6 +4,7 @@
   position: relative;
   padding: 0.5rem 0.75rem;
   cursor: pointer;
+  width: fit-content;
   &::after {
     content: "";
     position: absolute;
