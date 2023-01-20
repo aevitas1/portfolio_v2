@@ -5,9 +5,16 @@ import { AppContext } from "../../../context/AppContext";
 
 const Menu = () => {
   const { openMobile, setOpenMobile } = useContext(AppContext);
+
   return (
     <>
-      <div className={styles.nav_menu}>
+      <div
+        className={
+          openMobile
+            ? `${styles.nav_menu} ${styles.nav_mobile}`
+            : `${styles.nav_menu} ${styles.nav_desktop}`
+        }
+      >
         <ul>
           <li>
             <NavLink
