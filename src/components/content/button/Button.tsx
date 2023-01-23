@@ -14,25 +14,19 @@ const Button = (props: buttonProps) => {
 
   return (
     <>
-      <div
+      <button
         className={
           toggleScheme ? `${styles.button} ${styles.dark}` : styles.button
         }
       >
         {props.newtab ? (
           <NavLink to={props.link} target="_blank">
-            <div className={styles.topborder}></div>
             {props.text}
-            <div className={styles.bottomborder}></div>
           </NavLink>
         ) : (
-          <NavLink to={props.link}>
-            <div className={styles.topborder}></div>
-            {props.text}
-            <div className={styles.bottomborder}></div>
-          </NavLink>
+          <NavLink to={props.link}>{props.text}</NavLink>
         )}
-      </div>
+      </button>
     </>
   );
 };
