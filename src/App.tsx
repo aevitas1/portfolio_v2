@@ -12,7 +12,7 @@ import "/fonts/Inter-VariableFont_slnt_wght.ttf";
 function App() {
   // Mobile 100vh fix to avoid vertical scrollbar
   const calculateVh = () => {
-    let vh = window.innerHeight;
+    let vh: number = window.innerHeight;
     // Set this as a variable
     document.documentElement.style.setProperty("--vh", vh + "px");
   };
