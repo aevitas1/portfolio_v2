@@ -13,7 +13,7 @@ const Calculator = () => {
         tabletImage={tabletCalculator}
         mobileImage={mobileCalculator}
         projectName="Calculator"
-        description="A calculator which I made for my JavaScript course."
+        description="A calculator, this is the first JavaScript project I made."
         usedHtml={true}
         usedCss={true}
         usedSass={false}

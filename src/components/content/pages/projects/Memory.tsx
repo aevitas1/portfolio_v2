@@ -13,7 +13,7 @@ const Memory = () => {
         tabletImage={tabletMemory}
         mobileImage={mobileMemory}
         projectName="Memory"
-        description="A memory game which I made for my JavaScript course. This was the final assignment."
+        description="A memory game. Can you beat your highscores?"
         usedHtml={true}
         usedCss={true}
         usedSass={false}
