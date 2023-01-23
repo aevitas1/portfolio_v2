@@ -1,0 +1,136 @@
+@use "../../../styles/var.scss" as var;
+
+$formPadding: 1.25rem;
+
+.formsubmit {
+  display: none;
+}
+
+.form_wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.form {
+  max-width: 40rem;
+  display: flex;
+  flex-flow: column;
+  padding-top: var.$defaultPadding;
+  label {
+    position: relative;
+    padding-bottom: 0.75rem;
+    width: fit-content;
+    &::after {
+      content: "*";
+      position: absolute;
+      right: -0.6rem;
+      top: 0;
+      font-size: 12px;
+    }
+  }
+  .top_row {
+    display: flex;
+    @media screen and (max-width: 500px) {
+      flex-flow: column;
+    }
+    width: 100%;
+    gap: 1rem;
+    .name,
+    .email {
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+      input {
+        width: 100%;
+      }
+    }
+  }
+  .subject,
+  .message {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding-top: $formPadding;
+  }
+  .message {
+    padding-bottom: $formPadding;
+  }
+  input,
+  textarea {
+    padding: 0.5rem 1rem;
+    border-right: 5px solid transparent;
+    transition: 0.25s ease-out all;
+    background-color: rgb(172, 171, 171);
+    &:focus-within {
+      transform-origin: center;
+      border-right: 5px solid var.$borderColor;
+    }
+    &::selection {
+      background-color: var.$primary !important;
+      color: #fafafa;
+    }
+  }
+  &.dark {
+    input,
+    textarea {
+      background-color: var.$deviceBorderDark;
+      &:focus-within {
+        border-right: 5px solid var.$borderColorDark;
+      }
+      &::selection {
+        background-color: #fafafa !important;
+        color: #353535;
+      }
+    }
+  }
+}
+.btn_fade {
+  opacity: 0;
+  transition: 0.5s ease-out all;
+}
+.error {
+  position: absolute;
+  display: none;
+  bottom: 4rem;
+  transform: translateX(100vw);
+  opacity: 0;
+  &_display {
+    display: block;
+    font-size: 14px;
+    color: red;
+    animation: animError 2s 1 ease-out forwards;
+  }
+}
+.toast {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(0rem);
+  display: none;
+  &_display {
+    display: block;
+    opacity: 0;
+    animation: animToast 2s 1 ease-out 1s forwards;
+  }
+}
+
+@keyframes animError {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animToast {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-1rem);
+    opacity: 1;
+  }
+}
