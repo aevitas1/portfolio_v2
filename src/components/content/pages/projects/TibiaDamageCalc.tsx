@@ -30,8 +30,8 @@ const TibiaDamageCalc = () => {
       />
 
       <ProjectNavigation
-        next={"/projects/quiz"}
-        previous={"/projects/foodfreedom"}
+        next={"/projects/foodfreedom"}
+        previous={"/projects/portfolio"}
         firstProject={false}
         lastProject={false}
       />

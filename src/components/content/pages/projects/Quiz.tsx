@@ -31,7 +31,7 @@ const Quiz = () => {
 
       <ProjectNavigation
         next={"/projects/movies"}
-        previous={"/projects/tibia_damage_calculator"}
+        previous={"/projects/foodfreedom"}
         firstProject={false}
         lastProject={false}
       />

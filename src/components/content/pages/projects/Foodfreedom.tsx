@@ -30,8 +30,8 @@ const Foodfreedom = () => {
       />
 
       <ProjectNavigation
-        next={"/projects/tibia_damage_calculator"}
-        previous={"/projects/portfolio"}
+        next={"/projects/quiz"}
+        previous={"/projects/tibia_damage_calculator"}
         firstProject={false}
         lastProject={false}
       />

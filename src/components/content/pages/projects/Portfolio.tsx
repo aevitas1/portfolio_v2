@@ -49,7 +49,7 @@ const Portfolio = () => {
           </a>
         </div>
         <ProjectNavigation
-          next={"/projects/foodfreedom"}
+          next={"/projects/tibia_damage_calculator"}
           previous={""}
           firstProject={true}
           lastProject={false}
