@@ -11,7 +11,7 @@
     min-height: calc(var(--vh) - calc(var.$defaultHeight + 10rem));
   }
   @media screen and (max-width: 768px) {
-    min-height: calc(var(--vh) - calc(var.$defaultHeight + 7rem));
+    min-height: calc(var(--vh) - calc(var.$defaultHeight + 9.5rem));
   }
 
   .project_container {
@@ -32,6 +32,9 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      @media screen and (min-width: 1280px) {
+        display: none;
+      }
     }
     a {
       width: fit-content;

@@ -23,7 +23,7 @@ $textFont: Inter;
 /*<-- Color -->*/
 $transition: 0.25s ease-out all;
 $defaultPadding: 2.5rem;
-$pageContentHeight: min(70vh, 750px);
+$pageContentHeight: min(max(70vh, 900px), 750px);
 $borderWidth: 0.5rem;
 $defaultHeight: 5rem;
 

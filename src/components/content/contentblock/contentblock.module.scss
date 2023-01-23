@@ -43,7 +43,6 @@
       min-height: calc(var(--vh) - var.$defaultHeight);
       .content_inner {
         height: auto;
-        min-height: calc(var(--vh) - calc(var.$defaultHeight + 10rem));
       }
     }
 
