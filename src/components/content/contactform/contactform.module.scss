@@ -2,10 +2,6 @@
 
 $formPadding: 1.25rem;
 
-.formsubmit {
-  display: none;
-}
-
 .form_wrapper {
   position: relative;
   overflow: hidden;
@@ -54,7 +50,7 @@ $formPadding: 1.25rem;
   .message {
     padding-bottom: $formPadding;
   }
-  input,
+  input:not([type="submit"]),
   textarea {
     padding: 0.5rem 1rem;
     border-right: 5px solid transparent;
@@ -70,7 +66,7 @@ $formPadding: 1.25rem;
     }
   }
   &.dark {
-    input,
+    input:not([type="submit"]),
     textarea {
       background-color: var.$deviceBorderDark;
       &:focus-within {

@@ -2,7 +2,7 @@ import { useRef, useContext, useState } from "react";
 import { AppContext } from "../../../context/AppContext";
 import styles from "./contactform.module.scss";
 import emailjs from "@emailjs/browser";
-import Button from "../button/Button";
+import buttonStyles from "../button/button.module.scss";
 
 const ContactForm = () => {
   const form: any = useRef();
@@ -91,15 +91,21 @@ const ContactForm = () => {
         >
           Something went wrong. Please try again later.
         </div>
-        <div onClick={handleSubmit} className={toast ? styles.btn_fade : ""}>
-          <Button link="" text="Submit" newtab={false} />
+        <div
+          onClick={handleSubmit}
+          className={
+            toast
+              ? `${styles.btn_fade} ${buttonStyles.button}`
+              : buttonStyles.button
+          }
+        >
+          <input
+            type="submit"
+            value="Send"
+            id={"formsubmit"}
+            className={styles.formsubmit}
+          />
         </div>
-        <input
-          type="submit"
-          value="Send"
-          id={"formsubmit"}
-          className={styles.formsubmit}
-        />
       </form>
       <div
         className={
