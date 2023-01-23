@@ -95,7 +95,11 @@ const ContactForm = () => {
           onClick={handleSubmit}
           className={
             toast
-              ? `${styles.btn_fade} ${buttonStyles.button}`
+              ? toggleScheme
+                ? `${styles.btn_fade} ${buttonStyles.button} ${buttonStyles.dark}`
+                : `${styles.btn_fade} ${buttonStyles.button}`
+              : toggleScheme
+              ? `${buttonStyles.button} ${buttonStyles.dark}`
               : buttonStyles.button
           }
         >
