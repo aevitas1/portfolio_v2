@@ -33,11 +33,11 @@ const Home = () => {
             learn and eventually become a Full-stack Developer.
           </p>
           <Skills />
-          <div className={styles.cta_row}>
+          {/* <div className={styles.cta_row}>
             <Button link="/projects" text="Projects" newtab={false} />
             <Button link="/about" text="About me" newtab={false} />
             <Button link="/contact" text="Contact" newtab={false} />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

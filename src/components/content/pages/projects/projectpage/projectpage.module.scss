@@ -190,8 +190,12 @@ $timing: 1s;
       justify-self: flex-end;
       padding-bottom: 1.5rem;
       svg {
-        width: 2rem;
-        height: 1.8rem;
+        width: 3rem;
+        height: 2.7rem;
+        @media screen and (max-width: 500px) {
+          width: 2.5rem;
+          height: 2.25rem;
+        }
       }
     }
   }

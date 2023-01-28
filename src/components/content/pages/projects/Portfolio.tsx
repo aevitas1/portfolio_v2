@@ -53,6 +53,7 @@ const Portfolio = () => {
           previous={""}
           firstProject={true}
           lastProject={false}
+          projectCount="1/7"
         />
       </div>
     </div>

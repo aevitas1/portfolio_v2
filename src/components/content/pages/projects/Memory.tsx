@@ -34,6 +34,7 @@ const Memory = () => {
         previous={"/projects/movies"}
         firstProject={false}
         lastProject={false}
+        projectCount="6/7"
       />
     </div>
   );

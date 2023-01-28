@@ -34,6 +34,7 @@ const Movies = () => {
         previous={"/projects/quiz"}
         firstProject={false}
         lastProject={false}
+        projectCount="5/7"
       />
     </div>
   );

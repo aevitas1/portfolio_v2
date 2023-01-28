@@ -34,6 +34,7 @@ const Calculator = () => {
         previous={"/projects/memory"}
         firstProject={false}
         lastProject={true}
+        projectCount="7/7"
       />
     </div>
   );

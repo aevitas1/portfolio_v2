@@ -34,6 +34,7 @@ const Foodfreedom = () => {
         previous={"/projects/tibia_damage_calculator"}
         firstProject={false}
         lastProject={false}
+        projectCount="3/7"
       />
     </div>
   );

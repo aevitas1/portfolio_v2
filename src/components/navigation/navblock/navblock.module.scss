@@ -60,7 +60,7 @@
         }
       }
       top: var.$defaultHeight;
-      max-height: calc(var(--vh) - var.$defaultHeight);
+      height: calc(var(--vh) - var.$defaultHeight);
     }
     &.dark {
       &::before {

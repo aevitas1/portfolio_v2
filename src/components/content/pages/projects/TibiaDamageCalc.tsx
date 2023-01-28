@@ -34,6 +34,7 @@ const TibiaDamageCalc = () => {
         previous={"/projects/portfolio"}
         firstProject={false}
         lastProject={false}
+        projectCount="2/7"
       />
     </div>
   );

@@ -9,6 +9,7 @@ type navigationProps = {
   previous: string;
   firstProject: boolean;
   lastProject: boolean;
+  projectCount: string;
 };
 
 const ProjectNavigation = (props: navigationProps) => {
@@ -32,9 +33,12 @@ const ProjectNavigation = (props: navigationProps) => {
         <AiOutlineCaretLeft /> Previous
       </NavLink>
 
-      <NavLink to="/projects" className={styles.pagination_btn}>
-        Back
-      </NavLink>
+      <div className={styles.nav_back}>
+        <p>({props.projectCount})</p>
+        <NavLink to="/projects" className={styles.pagination_btn}>
+          Back
+        </NavLink>
+      </div>
 
       <NavLink
         to={props.lastProject ? "" : props.next}

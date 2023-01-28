@@ -34,6 +34,7 @@ const Quiz = () => {
         previous={"/projects/foodfreedom"}
         firstProject={false}
         lastProject={false}
+        projectCount="4/7"
       />
     </div>
   );
