@@ -3,6 +3,7 @@ import styles from "./navblock.module.scss";
 import Credits from "../credits/Credits";
 import Menu from "../menu/Menu";
 import { AppContext } from "../../../context/AppContext";
+import Icons from "../../header/icons/Icons";
 
 const NavBlock = () => {
   const { openMobile, toggleScheme } = useContext(AppContext);
@@ -19,11 +20,14 @@ const NavBlock = () => {
             : styles.nav_wrapper
         }
       >
-        <div className={styles.nav_body}>
-          <Menu />
-        </div>
-        <div className={styles.nav_footer}>
-          <Credits />
+        <Icons />
+        <div className={styles.nav_content}>
+          <div className={styles.nav_body}>
+            <Menu />
+          </div>
+          <div className={styles.nav_footer}>
+            <Credits />
+          </div>
         </div>
       </nav>
     </>

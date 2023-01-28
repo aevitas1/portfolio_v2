@@ -5,7 +5,6 @@
     position: relative;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
     top: var.$defaultHeight;
     height: calc(var.$pageContentHeight - var.$defaultHeight);
     width: min(250px, 100vw);
@@ -72,6 +71,18 @@
         border-bottom: var.$borderWidth solid var.$borderColorDark;
         border-right: var.$borderWidth solid var.$borderColorDark;
       }
+    }
+    // Icons
+    @media screen and (min-width: 1280px) {
+      > div:first-of-type {
+        display: none;
+      }
+    }
+    .nav_content {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      height: 100%;
     }
   }
 }
