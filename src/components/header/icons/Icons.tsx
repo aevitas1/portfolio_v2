@@ -27,7 +27,7 @@ const Icons = () => {
           <FaGithubSquare />
         </a>
         <a
-          href="mailto: sfhvdmeijden@gmail.com"
+          href="mailto: info@stephanvdmeijden.com"
           rel="noreferrer"
           target="_blank"
         >
