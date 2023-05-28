@@ -63,21 +63,17 @@ const Skills = () => {
   ];
 
   return (
-    <>
-      <div className={styles.skills}>
-        <h3>Tools & Skills</h3>
-        <div className={styles.skill_container}>
-          {toolset.map((item: ToolsetType) => (
-            <>
-              <div className={styles.item_container} key={item.id}>
-                <i>{item.name}</i>
-                <p className="helper">{item.description}</p>
-              </div>
-            </>
-          ))}
-        </div>
+    <div className={styles.skills}>
+      <h3>Tools & Skills</h3>
+      <div className={styles.skill_container}>
+        {toolset.map((item: ToolsetType) => (
+          <div className={styles.item_container} key={item.id}>
+            <i>{item.name}</i>
+            <p className="helper">{item.description}</p>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
