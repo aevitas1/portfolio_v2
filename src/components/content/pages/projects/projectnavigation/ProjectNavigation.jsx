@@ -3,6 +3,7 @@ import { useContext } from "react";
 import AppContext from "../../../../../data/AppContext";
 import { NavLink } from "react-router-dom";
 import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
+import { GoDot, GoDotFill } from "react-icons/go";
 import ProjectData from "../../../../../data/ProjectData";
 
 const ProjectNavigation = ({ item }) => {
@@ -34,7 +35,15 @@ const ProjectNavigation = ({ item }) => {
       </NavLink>
 
       <div className={styles.nav_back}>
-        <p>({nav.projectCount})</p>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          {ProjectData.map((item, index) =>
+            index === FindIndex ? (
+              <GoDotFill key={index} style={{ fontSize: "1.2rem" }} />
+            ) : (
+              <GoDot key={index} />
+            )
+          )}
+        </div>
         <NavLink to="/projects" className={styles.pagination_btn}>
           Back
         </NavLink>
