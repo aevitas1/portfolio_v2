@@ -10,8 +10,8 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      min-height: calc(100% - 100px);
-      justify-content: center;
+      height: calc(100% - 100px);
+      // flex: 1;
       .projectWrapper {
         display: flex;
         flex-flow: column;
@@ -41,9 +41,6 @@
     @media screen and (max-width: 768px) {
       height: auto;
       min-height: calc(var(--vh) - var.$defaultHeight);
-      .content_inner {
-        height: auto;
-      }
     }
 
     @media screen and (max-width: 400px) {
@@ -108,8 +105,7 @@
         border-bottom: var.$borderWidth solid var.$borderColorDark;
         border-right: var.$borderWidth solid var.$borderColorDark;
         @media screen and (max-width: 400px) {
-          border-bottom: calc(var.$borderWidth * 0.75) solid
-            var.$borderColorDark;
+          border-bottom: calc(var.$borderWidth * 0.75) solid var.$borderColorDark;
           border-right: calc(var.$borderWidth * 0.75) solid var.$borderColorDark;
         }
       }

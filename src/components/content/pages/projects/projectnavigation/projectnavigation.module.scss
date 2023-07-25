@@ -26,12 +26,14 @@
       pointer-events: none;
       opacity: 0.2;
     }
-    &::visited {
+    &::visited,
+    &::active {
       color: var.$primary;
     }
   }
   &.dark {
-    a::visited {
+    a::visited,
+    &::active {
       color: var.$primaryDark;
     }
   }
